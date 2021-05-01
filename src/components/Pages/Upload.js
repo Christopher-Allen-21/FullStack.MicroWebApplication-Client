@@ -1,10 +1,10 @@
 import React from 'react';
-import '../../styling/Upload.css'
+import '../../styling/Pages/Upload.css'
 
 const Upload = () => {
     return (
         <div>
-            <h1 id="zip-tube-title">ZipTube Upload</h1>
+            <p>You are on the Upload page</p>
         </div>
     );
 }

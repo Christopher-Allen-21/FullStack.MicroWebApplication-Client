@@ -1,10 +1,10 @@
 import React from 'react';
-import '../../styling/History.css'
+import '../../styling/Pages/History.css'
 
 const History = () => {
     return (
         <div>
-            <h1 id="zip-tube-title">ZipTube History</h1>
+            <p>You are on the History page</p>
         </div>
     );
 }

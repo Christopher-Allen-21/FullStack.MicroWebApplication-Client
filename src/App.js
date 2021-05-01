@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import './App.css';
 
 import Home from './components/Pages/Home';
 import Upload from './components/Pages/Upload';
@@ -17,16 +18,23 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Navigation />
-            <Switch>
-              <Route path="/" component={Home} exact/>
-              <Route path="/explore" component={Explore}/>
-              <Route path="/upload" component={Upload}/>
-              <Route path="/subscriptions" component={Subscriptions}/>
-              <Route path="/history" component={History}/>
-              <Route path="/support" component={Support}/>
-              <Route component={Error}/>
-            </Switch>
-            <SubSidebar />
+            <hr />
+            <h1 id="zip-tube-title">ZipTube</h1>
+            <hr />
+            <div className="page-element">
+              <Switch>
+                <Route path="/" component={Home} exact/>
+                <Route path="/explore" component={Explore}/>
+                <Route path="/upload" component={Upload}/>
+                <Route path="/subscriptions" component={Subscriptions}/>
+                <Route path="/history" component={History}/>
+                <Route path="/support" component={Support}/>
+                <Route component={Error}/>
+              </Switch>
+            </div>
+            <div>
+              <SubSidebar className="side-bar"/>
+            </div>
           </div>
         </BrowserRouter>
     );

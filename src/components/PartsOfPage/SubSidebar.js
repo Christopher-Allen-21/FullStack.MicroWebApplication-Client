@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styling/SubSidebar.css'
+import '../../styling/PartsOfPage/SubSidebar.css'
 
 const SubSidebar = () => {
     return (

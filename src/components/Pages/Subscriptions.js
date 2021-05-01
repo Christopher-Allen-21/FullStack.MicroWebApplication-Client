@@ -1,10 +1,10 @@
 import React from 'react';
-import '../../styling/Subscriptions.css'
+import '../../styling/Pages/Subscriptions.css'
 
 const Subscriptions = () => {
     return (
         <div>
-            <h1 id="zip-tube-title">ZipTube Subscriptions</h1>
+            <p>You are on the Subscriptions page</p>
         </div>
     );
 }

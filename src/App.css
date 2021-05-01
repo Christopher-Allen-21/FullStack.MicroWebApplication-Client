@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.page-element {
+  width: 80%;
+  float: right;
+}
+
+.side-bar {
+  width: 15%;
+  margin-righ: 2%;
+  float: left;
+}
+
+#zip-tube-title {
+  text-align: center;
+}
