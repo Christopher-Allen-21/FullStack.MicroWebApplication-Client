@@ -12,6 +12,7 @@ const Navigation = () => {
             <li><NavLink to="/subscriptions">Subscriptions</NavLink></li>
             <li><NavLink to="/history">History</NavLink></li>
             <li><NavLink to="/support">Support</NavLink></li>
+            <li><input id="search" type="text" placeholder="Search..."/></li>
         </ul>
     );
 }

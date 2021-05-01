@@ -1,3 +1,5 @@
+
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -11,6 +13,15 @@ li {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    margin-top: 8px;
+}
+
+/* Probably a better way to push to right side rather than super high margin % */
+/* Causes search bar to drop off page when resizing window */
+#search {
+    padding: 6px;
+    margin-left: 500%;
+    font-size: 17px;
 }
 
 a:link {

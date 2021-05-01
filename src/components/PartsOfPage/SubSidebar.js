@@ -3,8 +3,8 @@ import '../../styling/PartsOfPage/SubSidebar.css'
 
 const SubSidebar = () => {
     return (
-        <ul className="side-bar">
-            <li id="subscription-title">Subscriptions</li>
+        <ul className="sub-side-bar">
+            <li className="side-bar-item" id="subscription-title">Subscriptions</li>
             <li className="side-bar-item">Subscription 1</li>
             <li className="side-bar-item">Subscription 2</li>
             <li className="side-bar-item">Subscription 3</li>

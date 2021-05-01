@@ -1,4 +1,4 @@
-.side-bar {
+.sub-side-bar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -16,7 +16,6 @@
 }
 
 #subscription-title {
-    text-align: center;
     font-weight: bold;
     color: black;
 }

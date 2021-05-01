@@ -18,9 +18,13 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Navigation />
-            <hr />
-            <h1 id="zip-tube-title">ZipTube</h1>
-            <hr />
+
+            <div id="zip-tube-banner">
+              <hr />
+              <h1 id="zip-tube-title">ZipTube</h1>
+              <hr />
+            </div>
+
             <div className="page-element">
               <Switch>
                 <Route path="/" component={Home} exact/>
@@ -32,9 +36,11 @@ class App extends Component {
                 <Route component={Error}/>
               </Switch>
             </div>
+
             <div>
               <SubSidebar className="side-bar"/>
             </div>
+
           </div>
         </BrowserRouter>
     );
