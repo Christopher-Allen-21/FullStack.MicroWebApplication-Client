@@ -1,0 +1,13 @@
+.explore-item {
+    margin: 1% 10% 3% 5%; /* top right bottom left */
+    display: inline-block;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.explore-link {
+
+}
