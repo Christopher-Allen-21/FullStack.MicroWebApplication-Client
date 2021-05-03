@@ -17,11 +17,11 @@ li {
 }
 
 /* Probably a better way to push to right side rather than super high margin % */
-/* Causes search bar to drop off page when resizing window */
+/*!* Causes search bar to drop off page when resizing window *!*/
 #search {
     padding: 6px;
-    margin-left: 500%;
     font-size: 17px;
+    margin-left: 500%;
 }
 
 a:link {

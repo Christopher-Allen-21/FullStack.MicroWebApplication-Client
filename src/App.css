@@ -6,15 +6,15 @@
 
 .side-bar {
   width: 15%;
-  margin-righ: 2%;
+  margin-right: 2%;
   float: left;
 }
 
 #zip-tube-title {
   text-align: center;
-  color: white;
+  color: black;
 }
 
 #zip-tube-banner {
-  background-color: cornflowerblue;
+  background-color: lightgray;
 }

@@ -12,6 +12,8 @@ import Explore from './components/Pages/Explore';
 import History from './components/Pages/History';
 import Support from "./components/Pages/Support";
 
+// npm start in terminal to run
+
 class App extends Component {
   render() {
     return (

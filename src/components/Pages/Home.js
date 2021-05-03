@@ -3,7 +3,7 @@ import '../../styling/Pages/Home.css'
 
 const Home = () => {
     return (
-        <div>
+        <>
             <p>You are on the Home page</p>
 
 
@@ -22,7 +22,7 @@ const Home = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen></iframe>
 
-        </div>
+        </>
     );
 }
 
