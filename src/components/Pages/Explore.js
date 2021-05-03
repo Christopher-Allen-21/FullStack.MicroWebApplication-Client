@@ -6,35 +6,35 @@ const Explore = () => {
 
     return (
         <>
+            <a href="url" className="explore-link"><button>Trending</button></a>
+            <a href="url" className="explore-link"><button>News</button></a>
+            <a href="url" className="explore-link"><button>Sports</button></a>
+            <a href="url" className="explore-link"><button>Entertainment</button></a>
+            <br />
+            <a href="url" className="explore-link"><button>Music</button></a>
+            <a href="url" className="explore-link"><button>Video Games</button></a>
+            <a href="url" className="explore-link"><button>Movies</button></a>
+            <a href="url" className="explore-link"><button>Tv Shows</button></a>
 
-                <div className="explore-item"><a href="url" className="explore-link">Trending</a></div>
-                <div className="explore-item"><a href="url" className="explore-link">News</a></div>
-                <div className="explore-item"><a href="url" className="explore-link">Sports</a></div>
-                <div className="explore-item"><a href="url" className="explore-link">Entertainment</a></div>
-                <br />
-                <div className="explore-item"><a href="url" className="explore-link">Music</a></div>
-                <div className="explore-item"><a href="url" className="explore-link">Video Games</a></div>
-                <div className="explore-item"><a href="url" className="explore-link">Movies</a></div>
-                <div className="explore-item"><a href="url" className="explore-link">Tv Shows</a></div>
+            <br />
+            <hr />
 
-                <hr />
-                <p>You might also be interested in: </p>
-                <video className="explore-video" controls muted>
-                    <source src={url} type="video/mp4"></source>
-                </video>
-                <video className="explore-video" controls muted>
-                    <source src={url} type="video/mp4"></source>
-                </video>
-                <video className="explore-video" controls muted>
-                    <source src={url} type="video/mp4"></source>
-                </video>
-                <video className="explore-video" controls muted>
-                    <source src={url} type="video/mp4"></source>
-                </video>
-                <video className="explore-video" controls muted>
-                    <source src={url} type="video/mp4"></source>
-                </video>
-
+            <p>You might also be interested in: </p>
+            <video className="explore-video" controls muted>
+                <source src={url} type="video/mp4"></source>
+            </video>
+            <video className="explore-video" controls muted>
+                <source src={url} type="video/mp4"></source>
+            </video>
+            <video className="explore-video" controls muted>
+                <source src={url} type="video/mp4"></source>
+            </video>
+            <video className="explore-video" controls muted>
+                <source src={url} type="video/mp4"></source>
+            </video>
+            <video className="explore-video" controls muted>
+                <source src={url} type="video/mp4"></source>
+            </video>
         </>
     );
 }
