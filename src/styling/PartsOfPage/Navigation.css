@@ -1,20 +1,33 @@
-
-
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 1px;
+    padding: 1px;
     overflow: hidden;
+    background-color: red;
 }
 
 li {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    margin-top: 8px;
+    float: left;
 }
+
+li a {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 15px 17px;
+    text-decoration: none;
+}
+
+/* A color changes when hovered over */
+li a:hover {
+    background-color: darkred;
+}
+
+/* selected link */
+a:active {
+    color: hotpink;
+}
+
 
 /* Probably a better way to push to right side rather than super high margin % */
 /*!* Causes search bar to drop off page when resizing window *!*/
@@ -24,16 +37,3 @@ li {
     margin-left: 500%;
 }
 
-a:link {
-    color: red;
-}
-
-/* mouse over link */
-a:hover {
-    color: hotpink;
-}
-
-/* selected link */
-a:active {
-    color: blue;
-}
