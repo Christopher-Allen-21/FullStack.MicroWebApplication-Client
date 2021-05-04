@@ -1,4 +1,4 @@
-ul {
+.nav-bar-container {
     list-style-type: none;
     margin: 1px;
     padding: 1px;
@@ -6,7 +6,7 @@ ul {
     background-color: red;
 }
 
-li {
+.nav-bar-item {
     float: left;
 }
 
