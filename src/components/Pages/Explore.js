@@ -6,15 +6,15 @@ const Explore = () => {
 
     return (
         <>
-            <a href="url" className="explore-link"><button>Trending</button></a>
-            <a href="url" className="explore-link"><button>News</button></a>
-            <a href="url" className="explore-link"><button>Sports</button></a>
-            <a href="url" className="explore-link"><button>Entertainment</button></a>
+            <a href="url" className="explore-link"><button className="explore-button">Trending</button></a>
+            <a href="url" className="explore-link"><button className="explore-button">News</button></a>
+            <a href="url" className="explore-link"><button className="explore-button">Sports</button></a>
+            <a href="url" className="explore-link"><button className="explore-button">Entertainment</button></a>
             <br />
-            <a href="url" className="explore-link"><button>Music</button></a>
-            <a href="url" className="explore-link"><button>Video Games</button></a>
-            <a href="url" className="explore-link"><button>Movies</button></a>
-            <a href="url" className="explore-link"><button>Tv Shows</button></a>
+            <a href="url" className="explore-link"><button className="explore-button">Music</button></a>
+            <a href="url" className="explore-link"><button className="explore-button">Video Games</button></a>
+            <a href="url" className="explore-link"><button className="explore-button">Movies</button></a>
+            <a href="url" className="explore-link"><button className="explore-button">Tv Shows</button></a>
 
             <br />
             <hr />

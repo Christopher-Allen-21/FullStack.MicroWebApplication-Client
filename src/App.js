@@ -15,6 +15,8 @@ import Support from "./components/Pages/Support";
 // npm start in terminal to run
 
 class App extends Component {
+
+
   render() {
     return (
         <BrowserRouter>
@@ -31,7 +33,7 @@ class App extends Component {
               <Switch>
                 <Route path="/" component={Home} exact/>
                 <Route path="/explore" component={Explore}/>
-                <Route path="/upload" component={Upload}/>
+                <Route path="/upload"><Upload /></Route>
                 <Route path="/subscriptions" component={Subscriptions}/>
                 <Route path="/history" component={History}/>
                 <Route path="/support" component={Support}/>

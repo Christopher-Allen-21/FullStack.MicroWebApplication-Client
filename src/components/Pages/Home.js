@@ -6,23 +6,17 @@ const Home = () => {
         <>
             <p>You are on the Home page</p>
 
-
-            <iframe className="embedded-video" width="420" height="315" src="https://www.youtube.com/embed/9vwFciHiWlk"
-                    title="YouTube video player" frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen></iframe>
-
-            <iframe className="embedded-video"  width="420" height="315" src="https://www.youtube.com/embed/9vwFciHiWlk"
-                    title="YouTube video player" frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen></iframe>
-
-            <iframe className="embedded-video"  width="420" height="315" src="https://www.youtube.com/embed/9vwFciHiWlk"
-                    title="YouTube video player" frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen></iframe>
+            {/*<div className="App">*/}
+            {/*    <header className="App-header">*/}
+            {/*        <video controls muted>*/}
+            {/*            <source src="http://localhost:8090/file/download/2_Gracie.mp4" type="video/mp4"></source>*/}
+            {/*        </video>*/}
+            {/*    </header>*/}
+            {/*</div>*/}
 
         </>
+
+
     );
 }
 
