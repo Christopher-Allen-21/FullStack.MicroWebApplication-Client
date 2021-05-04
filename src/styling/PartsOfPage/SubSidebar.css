@@ -22,7 +22,7 @@
 
 /* selected link */
 .side-bar-link:active {
-    color: hotpink;
+    color: lightgrey;
 }
 
 #subscription-title {

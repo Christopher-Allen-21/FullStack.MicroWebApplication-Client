@@ -25,7 +25,7 @@ li a:hover {
 
 /* selected link */
 a:active {
-    color: hotpink;
+    color: gray;
 }
 
 

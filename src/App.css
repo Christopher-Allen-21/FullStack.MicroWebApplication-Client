@@ -21,6 +21,10 @@
   color: white;
 }
 
+#zip-tube-title-link:active{
+  color: lightgrey;
+}
+
 
 #zip-tube-banner {
   background-color: gray;
