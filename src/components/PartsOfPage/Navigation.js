@@ -5,14 +5,14 @@ import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
     return (
-        <ul>
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/explore">Explore</NavLink></li>
-            <li><NavLink to="/upload">Upload</NavLink></li>
-            <li><NavLink to="/subscriptions">Subscriptions</NavLink></li>
-            <li><NavLink to="/history">History</NavLink></li>
-            <li><NavLink to="/support">Support</NavLink></li>
-            <li><input id="search" type="text" placeholder="Search..."/></li>
+        <ul className="nav-bar-container">
+            <li className="nav-bar-item"><NavLink to="/">Home</NavLink></li>
+            <li className="nav-bar-item"><NavLink to="/explore">Explore</NavLink></li>
+            <li className="nav-bar-item"><NavLink to="/upload">Upload</NavLink></li>
+            <li className="nav-bar-item"><NavLink to="/subscriptions">Subscriptions</NavLink></li>
+            <li className="nav-bar-item"><NavLink to="/history">History</NavLink></li>
+            <li className="nav-bar-item"><NavLink to="/support">Support</NavLink></li>
+            <li className="nav-bar-item"><input id="search" type="text" placeholder="Search..."/></li>
         </ul>
     );
 }
