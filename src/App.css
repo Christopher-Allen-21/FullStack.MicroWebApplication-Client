@@ -15,6 +15,13 @@
   color: white;
 }
 
+#zip-tube-title-link{
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+
 #zip-tube-banner {
   background-color: gray;
 }
