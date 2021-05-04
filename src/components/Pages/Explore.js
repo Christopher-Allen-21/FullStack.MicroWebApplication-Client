@@ -34,6 +34,7 @@ const Explore = () => {
             <video className="explore-video" controls muted>
                 <source src={url} type="video/mp4"></source>
             </video>
+
         </>
     );
 }
