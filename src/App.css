@@ -5,16 +5,27 @@
 }
 
 .side-bar {
-  width: 15%;
-  margin-right: 2%;
+  width: 17%;
+  margin-right: 3%;
   float: left;
 }
 
 #zip-tube-title {
   text-align: center;
-  color: black;
+  color: white;
 }
 
+#zip-tube-title-link{
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+#zip-tube-title-link:active{
+  color: lightgrey;
+}
+
+
 #zip-tube-banner {
-  background-color: lightgray;
+  background-color: gray;
 }

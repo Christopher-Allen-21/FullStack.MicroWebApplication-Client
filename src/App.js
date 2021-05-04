@@ -25,7 +25,7 @@ class App extends Component {
 
             <div id="zip-tube-banner">
               <hr />
-              <h1 id="zip-tube-title">ZipTube</h1>
+              <h1 id="zip-tube-title"><a id="zip-tube-title-link" href="http://localhost:3000/">ZipTube</a></h1>
               <hr />
             </div>
 

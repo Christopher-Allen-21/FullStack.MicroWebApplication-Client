@@ -10,7 +10,6 @@ const Explore = () => {
             <a href="url" className="explore-link"><button className="explore-button">News</button></a>
             <a href="url" className="explore-link"><button className="explore-button">Sports</button></a>
             <a href="url" className="explore-link"><button className="explore-button">Entertainment</button></a>
-            <br />
             <a href="url" className="explore-link"><button className="explore-button">Music</button></a>
             <a href="url" className="explore-link"><button className="explore-button">Video Games</button></a>
             <a href="url" className="explore-link"><button className="explore-button">Movies</button></a>
@@ -19,7 +18,7 @@ const Explore = () => {
             <br />
             <hr />
 
-            <p>You might also be interested in: </p>
+            <p><strong>You might also be interested in...</strong></p>
             <video className="explore-video" controls muted>
                 <source src={url} type="video/mp4"></source>
             </video>
