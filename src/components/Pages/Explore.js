@@ -10,7 +10,6 @@ const Explore = () => {
             <a href="url" className="explore-link"><button className="explore-button">News</button></a>
             <a href="url" className="explore-link"><button className="explore-button">Sports</button></a>
             <a href="url" className="explore-link"><button className="explore-button">Entertainment</button></a>
-            <br />
             <a href="url" className="explore-link"><button className="explore-button">Music</button></a>
             <a href="url" className="explore-link"><button className="explore-button">Video Games</button></a>
             <a href="url" className="explore-link"><button className="explore-button">Movies</button></a>
