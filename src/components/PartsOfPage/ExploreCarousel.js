@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../../styling/PartsOfPage/ExploreCarousel.css';
 
 const Carousel = (props) => {
-    const {children, show} = props
+    const {children, show} = props //how many items to show
 
     const [currentIndex, setCurrentIndex] = useState(0)
     const [length, setLength] = useState(children.length)
@@ -15,13 +15,19 @@ const Carousel = (props) => {
     }, [children])
 
     const next = () => {
-        if (currentIndex < (length - show)) {
+        if (currentIndex == (length - show)){
+            setCurrentIndex(0)
+        }
+        else if (currentIndex < (length - show)) {
             setCurrentIndex(prevState => prevState + 1)
         }
     }
 
     const prev = () => {
-        if (currentIndex > 0) {
+        if (currentIndex == 0) {
+            setCurrentIndex(length - show)
+        }
+        else if (currentIndex > 0) {
             setCurrentIndex(prevState => prevState - 1)
         }
     }
@@ -55,12 +61,9 @@ const Carousel = (props) => {
     return (
         <div className="carousel-container">
             <div className="carousel-wrapper">
-                {
-                    currentIndex > 0 &&
                     <button onClick={prev} className="left-arrow">
                         &lt;
                     </button>
-                }
                 <div
                     className="carousel-content-wrapper"
                     onTouchStart={handleTouchStart}
@@ -73,12 +76,9 @@ const Carousel = (props) => {
                         {children}
                     </div>
                 </div>
-                {
-                    currentIndex < (length - show) &&
                     <button onClick={next} className="right-arrow">
                         &gt;
                     </button>
-                }
             </div>
         </div>
     )
