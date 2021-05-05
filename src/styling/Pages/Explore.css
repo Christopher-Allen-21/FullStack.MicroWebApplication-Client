@@ -32,3 +32,15 @@
     margin: 1% 5% 3% 5%;
     width: 10%;
 }
+
+.explore-video-carousel {
+    width: 100%;
+}
+
+#explore-carousel {
+    align-content: center;
+    margin-left: 35%;
+    margin-right: 25%;
+}
+
+
