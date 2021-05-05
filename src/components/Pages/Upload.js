@@ -17,9 +17,10 @@ class Upload extends React.Component {
             // No file selected initially
             selectedFile: null,
             uploadResponse: null,
-            videoTitle: null,
-            videoCategory: null,
-            videoDescription: null
+            videoTitle: "Title",
+            videoCategory: "News",
+            videoDescription: "describe",
+            videoId: [],
         };
 
         // HANDLING STATE CHANGES
@@ -39,33 +40,42 @@ class Upload extends React.Component {
             this.setState( {videoDescription: event.target.value })
         }
 
-
         // Create FormData Object, Append File Info To It, POST Request
         onFileUpload = (event) => {
-            // const formData = new FormData();
-            //
-            // formData.append(
-            //     "file",
-            //     this.state.selectedFile,
-            //     this.state.selectedFile.name
-            // );
+            const formData = new FormData();
 
-            // let videoId;
-            // axios.post("http://localhost:8090/file/upload", formData)
-            //     .then( response => {
-            //         console.log(response.data);
-            //         videoId = response.data;
-            //         //return response.data;
-            //     })
-            //     //.catch( error => alert( "File upload error. Please try again later."));
+            formData.append(
+                "file",
+                this.state.selectedFile
+            );
 
-            let videoId= 36;
-            axios.patch(`http://localhost:8090/video/${videoId}`,
-                { title: this.state.videoTitle, description: this.state.videoDescription, category: this.state.videoCategory}
-                )
-                .then( response => alert(response.data))
-                .catch( error => alert(error.message + ' ' + error.data + ' ' + error.response));
+            let videoId = [];
+            axios.post("http://localhost:8090/file/upload", formData)
+                .then( response => {
+                    this.setState( { videoId: [response.data] })
+                    videoId = [response.data];
+                    return response.data;
+                }).catch( error => alert('post' + error.message + ' ' + error.data + ' ' + error.response))
+                .finally( (videoId) => {
+                    if (this.state.videoId !== []) {this.sendPatchRequest(videoId)}
+                } );
+
+
         };
+
+        // Update video info in RDS
+        sendPatchRequest = () => {
+            let today = new Date().toISOString().slice(0, 10);
+            axios.patch(`http://localhost:8090/video/${this.state.videoId}`,
+                { title: this.state.videoTitle, description: this.state.videoDescription, videoPostedDate: today, category: this.state.videoCategory}
+            )
+                .then( response => {
+                    this.setState( {uploadResponse: `Video uploaded successfully! Video id is: ${this.state.videoId}`} );
+                    alert(response.data);
+                })
+                .catch( error => alert('patch' + error.message + ' ' + error.data + ' ' + error.response))
+                .finally( () => this.setState( { videoId: null }));
+        }
 
 
         // Display Info on the File the User Chose
@@ -142,6 +152,7 @@ class Upload extends React.Component {
                         <Button variant="secondary" disabled={this.disableUploadButton()} onClick={this.onFileUpload}>
                             Upload
                         </Button>
+                        <br/>{this.state.uploadResponse}
                     </div>
                 </>
             );

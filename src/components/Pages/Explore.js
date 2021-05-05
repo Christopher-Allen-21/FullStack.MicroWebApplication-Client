@@ -5,7 +5,8 @@ import ExploreCarousel from "../PartsOfPage/ExploreCarousel";
 
 
 const Explore = () => {
-    const url = "http://localhost:8090/file/download/2_Gracie.mp4"
+    const url = "http://localhost:8090/file/download/2_Gracie.mp4";
+    const url2 = "http://localhost:8090/file/download/81";
 
 
     return (
@@ -29,13 +30,13 @@ const Explore = () => {
                     <source src={url} type="video/mp4"></source>
                 </video>
                 <video className="explore-video-carousel" style={{padding: 8}} controls muted>
-                    <source src={url} type="video/mp4"></source>
+                    <source src={url2} type="video/mp4"></source>
                 </video>
                 <video className="explore-video-carousel" style={{padding: 8}} controls muted>
                     <source src={url} type="video/mp4"></source>
                 </video>
                 <video className="explore-video-carousel" style={{padding: 8}} controls muted>
-                    <source src={url} type="video/mp4"></source>
+                    <source src={url2} type="video/mp4"></source>
                 </video>
                 <video className="explore-video-carousel" style={{padding: 8}} controls muted>
                     <source src={url} type="video/mp4"></source>
