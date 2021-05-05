@@ -5,57 +5,94 @@ import '../../styling/Pages/Upload.css'
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form'
 
 class Upload extends React.Component {
+        constructor(props) {
+            super(props);
+        }
 
         /* Initial state */
         state = {
             // No file selected initially
             selectedFile: null,
-            uploadResponse: null
+            uploadResponse: null,
+            videoTitle: null,
+            videoCategory: null,
+            videoDescription: null
         };
 
-        // Event that will set the state on file select
+        // HANDLING STATE CHANGES
         onFileChange = (event) => {
-            this.setState( {selectedFile: event.target.files[0]} )
+            this.setState( { selectedFile: event.target.files[0] } )
         };
 
-        onFileUpload = (event) => {
-            // Create new formData object
-            // FormData interface allows you to construct key/value pairs representing fields and their values
-            // Can then be sent using XMLHttpRequest.send()
-            // Uses same format a form would use if encoding type were "multipart/form-data"
-            const formData = new FormData();
+        onTitleChange = (event) => {
+            this.setState( { videoTitle: event.target.value } )
+        };
 
-            formData.append(
-                "file",
-                this.state.selectedFile,
-                this.state.selectedFile.name
-            );
-
-            axios.post("http://localhost:8090/file/upload", formData).then( response => {
-                    this.setState( {uploadResponse: response } )
-                }
-            );
+        onCategoryChange = (event) => {
+            this.setState( {videoCategory: event.target.value })
         }
 
-        fileData = () => {
+        onDescriptionChange = (event) => {
+            this.setState( {videoDescription: event.target.value })
+        }
 
+
+        // Create FormData Object, Append File Info To It, POST Request
+        onFileUpload = (event) => {
+            // const formData = new FormData();
+            //
+            // formData.append(
+            //     "file",
+            //     this.state.selectedFile,
+            //     this.state.selectedFile.name
+            // );
+
+            // let videoId;
+            // axios.post("http://localhost:8090/file/upload", formData)
+            //     .then( response => {
+            //         console.log(response.data);
+            //         videoId = response.data;
+            //         //return response.data;
+            //     })
+            //     //.catch( error => alert( "File upload error. Please try again later."));
+
+            let videoId= 36;
+            axios.patch(`http://localhost:8090/video/${videoId}`,
+                { title: this.state.videoTitle, description: this.state.videoDescription, category: this.state.videoCategory}
+                )
+                .then( response => alert(response.data))
+                .catch( error => alert(error.message + ' ' + error.data + ' ' + error.response));
+        };
+
+
+        // Display Info on the File the User Chose
+        fileData = () => {
             if (this.state.selectedFile) {
+                let sizeInMB = (this.state.selectedFile.size / (1024 * 1024)).toFixed(1);
                 return (
                     <div>
                         <br />
                         <p>File Name: {this.state.selectedFile.name}</p>
                         <p>File Type: {this.state.selectedFile.type}</p>
+                        <p>File Size: {sizeInMB} MB</p>
                     </div>
                 )
             } else {
                 return (
                     <div>
-                        <br />
-                        Click 'Choose File' above to select a file to upload.
+                        Click 'Choose File' above to select a video file to upload.
                     </div>
                 )
+            }
+        }
+
+        // Disable the Upload Button if Not All Required Info Present
+        disableUploadButton = () => {
+            if (this.state.selectedFile == null || this.state.videoTitle == null || this.state.videoCategory == null) {
+                return true;
             }
         }
 
@@ -63,18 +100,48 @@ class Upload extends React.Component {
             return (
                 <>
                     <h1>Upload a Video</h1>
+                    <p>Choose any .mp4 file to upload.
+                    <br />Max allowed upload size: 10MB</p>
                     <div>
-                        <input type="file" accept=".mp4" onChange={this.onFileChange}/>
+                        <input type="file" accept=".mp4" onClick={this.onFileChange} onChange={this.onFileChange}/>
                         <p />
-                        <Button variant="secondary" onClick={this.onFileUpload}>
+                        <div>
+                            <h4>File Details: </h4>
+                            {this.fileData()}
+                            <br/>
+                            <Form className="video-upload-form">
+                                <Form.Group>
+                                    <Form.Label>Video Title*</Form.Label>
+                                    <Form.Control type="text" maxLength="50" placeholder="Video Title" onChange={this.onTitleChange}/>
+                                    <Form.Text>Video title cannot exceed 50 characters in length.</Form.Text>
+                                </Form.Group>
+                                <br/>
+                                <Form.Group>
+                                    <Form.Label>Video Category*</Form.Label>
+                                    <Form.Control as="select" onChange={this.onCategoryChange}>
+                                        <option default>Category</option>
+                                        <option>News</option>
+                                        <option>Sports</option>
+                                        <option>Entertainment</option>
+                                        <option>Music</option>
+                                        <option>Video Games</option>
+                                        <option>Movies</option>
+                                        <option>TV Shows</option>
+                                    </Form.Control>
+                                    <Form.Text>Pick a category that you think your video best fits into.</Form.Text>
+                                </Form.Group>
+                                <br/>
+                                <Form.Group>
+                                    <Form.Label>Video Description</Form.Label>
+                                    <Form.Control as="textarea" rows={3} maxLength="300" placeholder="Video Description" onChange={this.onDescriptionChange}/>
+                                    <Form.Text>Video description cannot exceed 300 characters in length.</Form.Text>
+                                </Form.Group>
+                            </Form>
+                        </div>
+                        <p />
+                        <Button variant="secondary" disabled={this.disableUploadButton()} onClick={this.onFileUpload}>
                             Upload
                         </Button>
-                    </div>
-                    <p />
-                    <div>
-                        {this.state.uploadResponse}
-                        <h4>File Details: </h4>
-                        {this.fileData()}
                     </div>
                 </>
             );
