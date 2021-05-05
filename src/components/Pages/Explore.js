@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import '../../styling/Pages/Explore.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ExploreCarousel from "../PartsOfPage/ExploreCarousel";
-import Carousel from 'react-bootstrap/Carousel';
 
 
 const Explore = () => {
@@ -18,7 +17,7 @@ const Explore = () => {
             <a href="url" className="explore-link"><button className="explore-button">Music</button></a>
             <a href="url" className="explore-link"><button className="explore-button">Video Games</button></a>
             <a href="url" className="explore-link"><button className="explore-button">Movies</button></a>
-            <a href="url" className="explore-link"><button className="explore-button">Tv Shows</button></a>
+            <a href="url" className="explore-link"><button className="explore-button">TV Shows</button></a>
 
             <br />
             <hr />
@@ -41,49 +40,17 @@ const Explore = () => {
                 <video className="explore-video-carousel" style={{padding: 8}} controls muted>
                     <source src={url} type="video/mp4"></source>
                 </video>
+                <video className="explore-video-carousel" style={{padding: 8}} controls muted>
+                    <source src={url} type="video/mp4"></source>
+                </video>
+                <video className="explore-video-carousel" style={{padding: 8}} controls muted>
+                    <source src={url} type="video/mp4"></source>
+                </video>
             </ExploreCarousel>
-
-
-
-
-            {/*<Carousel id="explore-carousel">*/}
-            {/*    <Carousel.Item>*/}
-            {/*        <video className="explore-video-carousel" controls muted>*/}
-            {/*            <source src={url} type="video/mp4"></source>*/}
-            {/*        </video>*/}
-            {/*    </Carousel.Item>*/}
-            {/*    <Carousel.Item>*/}
-            {/*        <video className="explore-video-carousel" controls muted>*/}
-            {/*            <source src={url} type="video/mp4"></source>*/}
-            {/*        </video>*/}
-            {/*    </Carousel.Item>*/}
-            {/*    <Carousel.Item>*/}
-            {/*        <video className="explore-video-carousel" controls muted>*/}
-            {/*            <source src={url} type="video/mp4"></source>*/}
-            {/*        </video>*/}
-            {/*    </Carousel.Item>*/}
-            {/*    <Carousel.Item>*/}
-            {/*        <video className="explore-video-carousel" controls muted>*/}
-            {/*            <source src={url} type="video/mp4"></source>*/}
-            {/*        </video>*/}
-            {/*    </Carousel.Item>*/}
-            {/*</Carousel>*/}
-
-            {/*<video className="explore-video" controls muted>*/}
-            {/*    <source src={url} type="video/mp4"></source>*/}
-            {/*</video>*/}
-            {/*<video className="explore-video" controls muted>*/}
-            {/*    <source src={url} type="video/mp4"></source>*/}
-            {/*</video>*/}
-            {/*<video className="explore-video" controls muted>*/}
-            {/*    <source src={url} type="video/mp4"></source>*/}
-            {/*</video>*/}
-            {/*<video className="explore-video" controls muted>*/}
-            {/*    <source src={url} type="video/mp4"></source>*/}
-            {/*</video>*/}
 
         </>
     );
 }
 
 export default Explore;
+
