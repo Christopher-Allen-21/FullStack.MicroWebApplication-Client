@@ -17,9 +17,9 @@ class Upload extends React.Component {
             // No file selected initially
             selectedFile: null,
             uploadResponse: null,
-            videoTitle: "Title",
-            videoCategory: "News",
-            videoDescription: "describe",
+            videoTitle: null,
+            videoCategory: null,
+            videoDescription: null,
             videoId: [],
         };
 
@@ -153,6 +153,7 @@ class Upload extends React.Component {
                             Upload
                         </Button>
                         <br/>{this.state.uploadResponse}
+                        <br/>
                     </div>
                 </>
             );
