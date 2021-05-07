@@ -11,8 +11,8 @@ const Explore = () => {
 
     return (
         <>
-            <a href="/videos" className="explore-link"><button className="explore-button">Trending</button></a>
-            <a href="/play" className="explore-link"><button className="explore-button">News</button></a>
+            <a href="/play" className="explore-link"><button className="explore-button">Trending</button></a>
+            <a href="url" className="explore-link"><button className="explore-button">News</button></a>
             <a href="url" className="explore-link"><button className="explore-button">Sports</button></a>
             <a href="url" className="explore-link"><button className="explore-button">Entertainment</button></a>
             <a href="url" className="explore-link"><button className="explore-button">Music</button></a>
