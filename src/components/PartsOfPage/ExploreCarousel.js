@@ -15,7 +15,7 @@ const Carousel = (props) => {
     }, [children])
 
     const next = () => {
-        if (currentIndex == (length - show)){
+        if (currentIndex === (length - show)){
             setCurrentIndex(0)
         }
         else if (currentIndex < (length - show)) {
@@ -24,7 +24,7 @@ const Carousel = (props) => {
     }
 
     const prev = () => {
-        if (currentIndex == 0) {
+        if (currentIndex === 0) {
             setCurrentIndex(length - show)
         }
         else if (currentIndex > 0) {
