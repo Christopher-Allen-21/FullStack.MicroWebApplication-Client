@@ -12,6 +12,7 @@ import Explore from './components/Pages/Explore';
 import History from './components/Pages/History';
 import Support from "./components/Pages/Support";
 import VideoList from "./components/Pages/VideoList";
+import PlayVideo from "./components/Pages/PlayVideo";
 
 // npm start in terminal to run
 
@@ -39,6 +40,7 @@ class App extends Component {
                 <Route path="/history" component={History}/>
                 <Route path="/support" component={Support}/>
                 <Route path="/videos" component={VideoList}/>
+                <Route path="/play" component={PlayVideo}/>
                 <Route component={Error}/>
               </Switch>
             </div>

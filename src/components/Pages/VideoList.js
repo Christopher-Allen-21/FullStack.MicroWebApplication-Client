@@ -44,19 +44,23 @@ class VideoList extends React.Component {
         }
         else {
             return (
-                <ul>
-                    {items.map(item => (
-                        <li key={item.videoId}>
-                            <strong>Video ID:</strong> {item.videoId}<br /><strong>Title:</strong> {item.title}
+                <>
+                    {items.map(video => (
+                        <div className="video-list-container" key={video.videoId}>
+                            <strong>Video ID:</strong> {video.videoId}<br />
+                            <video className="video-list-video" src={`http://localhost:8090/file/download/${video.videoId}`} type="video/mp4" controls muted></video>
                             <br />
-                            <video className="videolist-video" src={`http://localhost:8090/file/download/${item.videoId}`} type="video/mp4" controls muted></video>
-                            <br />
-                            User ID: {item.userId}<br />Length: {item.lengthOfVideo}<br />View Count: {item.viewCount}<br />Description: {item.description}<br />Like Count: {item.likeCount}<br />Dislike Count: {item.dislikeCount}<br />Category: {item.category}
-                            <br />
-                            <br />
-                        </li>
+                            <h1 id="video-list-title">{video.title}</h1>
+                            <p className="video-list-paragraph">
+                                {video.likeCount} Likes {video.dislikeCount} Dislikes<br />
+                                {video.viewCount} views - Posted on {video.videoPostedDate.substr(0,10)}<br />
+                                <strong>Description:</strong><br />
+                                <span className="video-list-description">{video.description}</span><br />
+                                <strong>Category: </strong>{video.category}
+                            </p>
+                        </div>
                     ))}
-                </ul>
+                </>
             );
         }
     }

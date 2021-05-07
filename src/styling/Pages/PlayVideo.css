@@ -1,0 +1,17 @@
+.playVideo-container {
+    margin-left: 19%;
+    margin-bottom: 5%;
+}
+
+#playVideo-title {
+
+}
+
+.playVideo-video {
+    width: 720px;
+    height: 480px;
+}
+
+.playVideo-paragraph {
+    font-size: 18px;
+}

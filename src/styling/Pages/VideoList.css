@@ -1,4 +1,19 @@
-.videolist-video {
-    width: 200px;
-    height: 200px;
+
+.video-list-container {
+    display: inline-block;
+    margin: 2%;
+    width: 45%;
+}
+
+.video-list-video {
+    width: 480px;
+    height: 320px;
+}
+
+.video-list-paragraph {
+    text-align: left;
+}
+
+.video-list-description {
+    overflow-wrap: break-word;
 }
