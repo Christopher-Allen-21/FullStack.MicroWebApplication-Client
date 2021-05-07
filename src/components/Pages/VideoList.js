@@ -47,9 +47,13 @@ class VideoList extends React.Component {
                 <ul>
                     {items.map(item => (
                         <li key={item.videoId}>
-                            Video ID:{item.videoId}  Title:{item.title}  User ID:{item.userId}  Length:{item.lengthOfVideo}  View Count:{item.viewCount}  Description:{item.description}  Like Count:{item.likeCount} Dislike Count:{item.dislikeCount}  Category:{item.category}
-
+                            <strong>Video ID:</strong> {item.videoId}<br /><strong>Title:</strong> {item.title}
+                            <br />
                             <video className="videolist-video" src={`http://localhost:8090/file/download/${item.videoId}`} type="video/mp4" controls muted></video>
+                            <br />
+                            User ID: {item.userId}<br />Length: {item.lengthOfVideo}<br />View Count: {item.viewCount}<br />Description: {item.description}<br />Like Count: {item.likeCount}<br />Dislike Count: {item.dislikeCount}<br />Category: {item.category}
+                            <br />
+                            <br />
                         </li>
                     ))}
                 </ul>
