@@ -1,19 +1,30 @@
 import React from 'react';
 import '../../styling/PartsOfPage/Navigation.css'
-
-import { NavLink } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Form from 'react-bootstrap/Form';
+import FormControl from 'react-bootstrap/FormControl';
+import Button from 'react-bootstrap/Button';
 
 const Navigation = () => {
     return (
-        <ul className="nav-bar-container">
-            <li className="nav-bar-item"><NavLink to="/">Home</NavLink></li>
-            <li className="nav-bar-item"><NavLink to="/explore">Explore</NavLink></li>
-            <li className="nav-bar-item"><NavLink to="/upload">Upload</NavLink></li>
-            <li className="nav-bar-item"><NavLink to="/subscriptions">Subscriptions</NavLink></li>
-            <li className="nav-bar-item"><NavLink to="/history">History</NavLink></li>
-            <li className="nav-bar-item"><NavLink to="/support">Support</NavLink></li>
-            <li className="nav-bar-item"><input id="search" type="text" placeholder="Search..."/></li>
-        </ul>
+        <>
+            <Navbar className="nav-bar-container" bg="dark" variant="dark">
+                <Navbar.Brand id="nav-bar-logo" href="/"><strong>ZipTube</strong></Navbar.Brand>
+                <Nav className="mr-auto">
+                    <Nav.Link href="/explore">Explore</Nav.Link>
+                    <Nav.Link href="/upload">Upload</Nav.Link>
+                    <Nav.Link href="/subscriptions">Subscriptions</Nav.Link>
+                    <Nav.Link href="/history">History</Nav.Link>
+                    <Nav.Link href="/support">Support</Nav.Link>
+                </Nav>
+                <Form inline>
+                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                    <Button variant="outline-info">Search</Button>
+                </Form>
+            </Navbar>
+        </>
     );
 }
 
