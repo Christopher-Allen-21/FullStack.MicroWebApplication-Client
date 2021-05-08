@@ -26,25 +26,25 @@ const Explore = () => {
             <p><strong>You might also be interested in...</strong></p>
 
             <ExploreCarousel show={3}>
-                <video className="explore-video-carousel" style={{padding: 8}} controls muted>
+                <video controlsList="nofullscreen nodownload" className="explore-video-carousel" style={{padding: 8}} controls muted>
                     <source src={url} type="video/mp4"></source>
                 </video>
-                <video className="explore-video-carousel" style={{padding: 8}} controls muted>
+                <video controlsList="nofullscreen nodownload" className="explore-video-carousel" style={{padding: 8}} controls muted>
                     <source src={url2} type="video/mp4"></source>
                 </video>
-                <video className="explore-video-carousel" style={{padding: 8}} controls muted>
+                <video controlsList="nofullscreen nodownload" className="explore-video-carousel" style={{padding: 8}} controls muted>
                     <source src={url} type="video/mp4"></source>
                 </video>
-                <video className="explore-video-carousel" style={{padding: 8}} controls muted>
+                <video controlsList="nofullscreen nodownload" className="explore-video-carousel" style={{padding: 8}} controls muted>
                     <source src={url2} type="video/mp4"></source>
                 </video>
-                <video className="explore-video-carousel" style={{padding: 8}} controls muted>
+                <video controlsList="nofullscreen nodownload" className="explore-video-carousel" style={{padding: 8}} controls muted>
                     <source src={url} type="video/mp4"></source>
                 </video>
-                <video className="explore-video-carousel" style={{padding: 8}} controls muted>
+                <video controlsList="nofullscreen nodownload" className="explore-video-carousel" style={{padding: 8}} controls muted>
                     <source src={url} type="video/mp4"></source>
                 </video>
-                <video className="explore-video-carousel" style={{padding: 8}} controls muted>
+                <video controlsList="nofullscreen nodownload" className="explore-video-carousel" style={{padding: 8}} controls muted>
                     <source src={url} type="video/mp4"></source>
                 </video>
             </ExploreCarousel>

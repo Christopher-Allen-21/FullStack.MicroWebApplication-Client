@@ -50,7 +50,7 @@ class Home extends React.Component {
                                         <div className="home-container" key={video.videoId}>
                                                 <strong>Video ID:</strong> {video.videoId}<br />
                                                 <Link to={{pathname: '/play', state: {videoId: video.videoId}}}>
-                                                        <video className="video-list-video" src={`http://localhost:8090/file/download/${video.videoId}`} type="video/mp4" controls muted></video>
+                                                        <video controlsList="nofullscreen nodownload" className="video-list-video" src={`http://localhost:8090/file/download/${video.videoId}`} type="video/mp4" controls muted></video>
                                                 </Link>
                                                 <br />
                                                 <h1 id="home-title">{video.title}</h1>
