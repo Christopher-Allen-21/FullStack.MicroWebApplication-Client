@@ -11,6 +11,7 @@ import SubSidebar from "./components/PartsOfPage/SubSidebar";
 import Explore from './components/Pages/Explore';
 import History from './components/Pages/History';
 import Support from "./components/Pages/Support";
+import VideosByCategory from "./components/Pages/VideosByCategory";
 import PlayVideo from "./components/Pages/PlayVideo";
 
 // npm start in terminal to run
@@ -38,6 +39,7 @@ class App extends Component {
                 <Route path="/subscriptions" component={Subscriptions}/>
                 <Route path="/history" component={History}/>
                 <Route path="/support" component={Support}/>
+                <Route path="/videos" component={VideosByCategory}/>
                 <Route path="/play" component={PlayVideo}/>
                 <Route component={Error}/>
               </Switch>

@@ -8,13 +8,13 @@ class PlayVideo extends React.Component {
             error: null,
             isLoaded: false,
             video: null,
-            videoId: 81
         };
     }
     // add button for like/dislike; button sends post request to update whichever
     // maybe send post request everytime this runs to increment view count
     componentDidMount() {
-        fetch(`http://localhost:8090/video/${this.state.videoId}`)
+        const { videoId } = this.props.location.state
+        fetch(`http://localhost:8090/video/${videoId}`)
             .then(res => res.json())
             .then(
                 (result) => {

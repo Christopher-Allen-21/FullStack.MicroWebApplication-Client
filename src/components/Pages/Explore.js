@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import '../../styling/Pages/Explore.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ExploreCarousel from "../PartsOfPage/ExploreCarousel";
@@ -11,15 +12,14 @@ const Explore = () => {
 
     return (
         <>
-            <a href="/play" videoId="81" className="explore-link"><button className="explore-button">Trending</button></a>
-            <a href="url" className="explore-link"><button className="explore-button">News</button></a>
-            <a href="url" className="explore-link"><button className="explore-button">Sports</button></a>
-            <a href="url" className="explore-link"><button className="explore-button">Entertainment</button></a>
-            <a href="url" className="explore-link"><button className="explore-button">Music</button></a>
-            <a href="url" className="explore-link"><button className="explore-button">Traveling</button></a>
-            <a href="url" className="explore-link"><button className="explore-button">Fitness</button></a>
-            <a href="url" className="explore-link"><button className="explore-button">Video Games</button></a>
-
+            <Link to={{pathname: '/play', state: {videoId: 83}}} className="explore-link">Trending</Link>
+            <Link to={{pathname: '/videos', state: {category: "news"}}} className="explore-link">News</Link>
+            <Link to={{pathname: '/videos', state: {category: "sports"}}} className="explore-link">Sports</Link>
+            <Link to={{pathname: '/videos', state: {category: "entertainment"}}} className="explore-link">Entertainment</Link>
+            <Link to={{pathname: '/videos', state: {category: "music"}}} className="explore-link">Music</Link>
+            <Link to={{pathname: '/videos', state: {category: "traveling"}}} className="explore-link">Traveling</Link>
+            <Link to={{pathname: '/videos', state: {category: "fitness"}}} className="explore-link">Fitness</Link>
+            <Link to={{pathname: '/videos', state: {category: "videogames"}}} className="explore-link">Video Games</Link>
             <br />
             <hr />
 
