@@ -11,14 +11,14 @@ const Explore = () => {
 
     return (
         <>
-            <a href="/play" className="explore-link"><button className="explore-button">Trending</button></a>
+            <a href="/play" videoId="81" className="explore-link"><button className="explore-button">Trending</button></a>
             <a href="url" className="explore-link"><button className="explore-button">News</button></a>
             <a href="url" className="explore-link"><button className="explore-button">Sports</button></a>
             <a href="url" className="explore-link"><button className="explore-button">Entertainment</button></a>
             <a href="url" className="explore-link"><button className="explore-button">Music</button></a>
+            <a href="url" className="explore-link"><button className="explore-button">Traveling</button></a>
+            <a href="url" className="explore-link"><button className="explore-button">Fitness</button></a>
             <a href="url" className="explore-link"><button className="explore-button">Video Games</button></a>
-            <a href="url" className="explore-link"><button className="explore-button">Movies</button></a>
-            <a href="url" className="explore-link"><button className="explore-button">TV Shows</button></a>
 
             <br />
             <hr />

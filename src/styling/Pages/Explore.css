@@ -23,13 +23,10 @@
     cursor: pointer;
 }
 
-.explore-video {
-    margin: 1% 5% 3% 5%;
-    width: 10%;
-}
 
 .explore-video-carousel {
-    width: 100%;
+    width: 480px;
+    height: 320px;
 }
 
 

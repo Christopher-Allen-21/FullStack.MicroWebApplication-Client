@@ -134,9 +134,9 @@ class Upload extends React.Component {
                                         <option>Sports</option>
                                         <option>Entertainment</option>
                                         <option>Music</option>
+                                        <option>Traveling</option>
+                                        <option>Fitness</option>
                                         <option>Video Games</option>
-                                        <option>Movies</option>
-                                        <option>TV Shows</option>
                                     </Form.Control>
                                     <Form.Text>Pick a category that you think your video best fits into.</Form.Text>
                                 </Form.Group>

@@ -12,7 +12,7 @@ class Home extends React.Component {
         }
 
         componentDidMount() {
-                fetch("http://localhost:8090/video")
+                fetch("http://localhost:8090/video/")
                     .then(res => res.json())
                     .then(
                         (result) => {
