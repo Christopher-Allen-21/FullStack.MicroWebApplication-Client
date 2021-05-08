@@ -1,5 +1,6 @@
 import React from "react";
 import '../../styling/Pages/VideosByCategory.css';
+import {Link} from "react-router-dom";
 
 class VideosByCategory extends React.Component {
     constructor(props) {
@@ -49,7 +50,9 @@ class VideosByCategory extends React.Component {
                     {items.map(video => (
                         <div className="video-list-container" key={video.videoId}>
                             <strong>Video ID:</strong> {video.videoId}<br />
-                            <video className="video-list-video" src={`http://localhost:8090/file/download/${video.videoId}`} type="video/mp4" controls muted></video>
+                            <Link to={{pathname: '/play', state: {videoId: video.videoId}}}>
+                                <video className="video-list-video" src={`http://localhost:8090/file/download/${video.videoId}`} type="video/mp4" controls muted></video>
+                            </Link>
                             <br />
                             <h1 id="video-list-title">{video.title}</h1>
                             <p className="video-list-paragraph">

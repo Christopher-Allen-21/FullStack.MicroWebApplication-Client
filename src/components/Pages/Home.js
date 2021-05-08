@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../styling/Pages/Home.css'
+import {Link} from "react-router-dom";
 
 class Home extends React.Component {
         constructor(props) {
@@ -46,16 +47,18 @@ class Home extends React.Component {
                         return (
                             <>
                                     {items.map(video => (
-                                        <div className="video-list-container" key={video.videoId}>
+                                        <div className="home-container" key={video.videoId}>
                                                 <strong>Video ID:</strong> {video.videoId}<br />
-                                                <video className="video-list-video" src={`http://localhost:8090/file/download/${video.videoId}`} type="video/mp4" controls muted></video>
+                                                <Link to={{pathname: '/play', state: {videoId: video.videoId}}}>
+                                                        <video className="video-list-video" src={`http://localhost:8090/file/download/${video.videoId}`} type="video/mp4" controls muted></video>
+                                                </Link>
                                                 <br />
-                                                <h1 id="video-list-title">{video.title}</h1>
-                                                <p className="video-list-paragraph">
+                                                <h1 id="home-title">{video.title}</h1>
+                                                <p className="home-paragraph">
                                                         {video.likeCount} Likes {video.dislikeCount} Dislikes<br />
                                                         {video.viewCount} views - Posted on {video.videoPostedDate.substr(0,10)}<br />
                                                         <strong>Description:</strong><br />
-                                                        <span className="video-list-description">{video.description}</span><br />
+                                                        <span className="home-description">{video.description}</span><br />
                                                         <strong>Category: </strong>{video.category}
                                                 </p>
                                         </div>

@@ -1,18 +1,18 @@
-.video-list-container {
+.home-container {
     display: inline-block;
     margin: 2%;
     width: 45%;
 }
 
-.video-list-video {
+.home-video {
     width: 480px;
     height: 320px;
 }
 
-.video-list-paragraph {
+.home-paragraph {
     text-align: left;
 }
 
-.video-list-description {
+.home-description {
     overflow-wrap: break-word;
 }
