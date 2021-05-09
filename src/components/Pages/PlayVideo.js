@@ -2,7 +2,7 @@ import React from "react";
 import '../../styling/Pages/PlayVideo.css';
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import Button from 'react-bootstrap/Button'
-import {Badge, ToggleButtonGroup} from "react-bootstrap";
+import {Accordion, Badge, ToggleButtonGroup} from "react-bootstrap";
 import Card from 'react-bootstrap/Card'
 
 class PlayVideo extends React.Component {
@@ -45,6 +45,7 @@ class PlayVideo extends React.Component {
             )
     }
 
+    // ON CLICK OF LIKE BUTTON
     clickLikeButton = () => {
         // FIRST CLICK OF LIKE BUTTON
         if (this.state.likeClicks === 0) {
@@ -57,6 +58,7 @@ class PlayVideo extends React.Component {
         }
     }
 
+    // ON CLICK OF DISLIKE BUTTON
     clickDislikeButton = () => {
         // FIRST CLICK OF DISLIKE BUTTON
         if (this.state.dislikeClicks === 0) {
@@ -140,6 +142,34 @@ class PlayVideo extends React.Component {
                             <strong>Category:</strong> {this.state.video.category} <br/>
                         </p>
 
+                        {/* COMMENTS SECTION */}
+                        <strong>Comments:</strong><br />
+                        <Accordion>
+                            <Card>
+                                <Card.Header>
+                                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                                        Show Comments
+                                    </Accordion.Toggle>
+                                </Card.Header>
+                                <Accordion.Collapse eventKey="0">
+                                    <Card.Body>
+                                        This is where the comments will be displayed.
+                                    </Card.Body>
+                                </Accordion.Collapse>
+                            </Card>
+                            <Card>
+                                <Card.Header>
+                                    <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                                        Add a Comment
+                                    </Accordion.Toggle>
+                                </Card.Header>
+                                <Accordion.Collapse eventKey="1">
+                                    <Card.Body>
+                                        User will be able to add comments here (hopefully).
+                                    </Card.Body>
+                                </Accordion.Collapse>
+                            </Card>
+                        </Accordion>
                     </p>
                 </div>
             );
