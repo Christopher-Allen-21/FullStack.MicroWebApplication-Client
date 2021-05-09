@@ -3,7 +3,7 @@ import '../../styling/Pages/PlayVideo.css';
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import Button from 'react-bootstrap/Button'
 import ToggleButton from 'react-bootstrap/ToggleButton'
-import {ToggleButtonGroup} from "react-bootstrap";
+import {Badge, ToggleButtonGroup} from "react-bootstrap";
 import Card from 'react-bootstrap/Card'
 
 class PlayVideo extends React.Component {
@@ -115,18 +115,19 @@ class PlayVideo extends React.Component {
 
                     {/* VIDEO TITLE */}
                     <h1 id="playVideo-title">{this.state.video.title}</h1>
-                    <p className="playVideo-paragraph">
-                        {/* LIKE AND DISLIKE BUTTONS */}
-                        <ButtonGroup className="like-dislike-buttons" type="checkbox" defaultValue={[1]} aria-label="like-dislike-buttons">
-                            <Button variant="success" value={0} disabled={this.state.likeDisabled} onClick={this.clickLikeButton}>Like</Button>
-                            <Button variant="danger" value={0} disabled={this.state.dislikeDisabled} onClick={this.clickDislikeButton}>Dislike</Button>
-                        </ButtonGroup>
-                        &nbsp; {this.state.video.likeCount} Likes
-                        &nbsp; {this.state.video.dislikeCount} Dislikes
-                        <br />
 
-                        {/* PAGE VIEWS AND POSTED DATE */}
-                        {this.state.video.viewCount} views - Posted on {this.state.video.videoPostedDate.substr(0,10)}
+                    <p className="playVideo-paragraph">
+
+                        {/* LIKE AND DISLIKE BUTTONS */}
+                        <ButtonGroup className="like-dislike-buttons" type="checkbox" aria-label="like-dislike-buttons">
+                            <Button variant="success" disabled={this.state.likeDisabled} onClick={this.clickLikeButton}>
+                                Like <Badge variant="light">{this.state.video.likeCount}</Badge>
+                            </Button>
+                            <Button variant="danger" disabled={this.state.dislikeDisabled} onClick={this.clickDislikeButton}>
+                                Dislike <Badge variant="light">{this.state.video.dislikeCount}</Badge>
+                            </Button>
+                        </ButtonGroup>
+                        &nbsp; {this.state.video.viewCount} Views
                         <br /><br />
 
                         {/* VIDEO DESCRIPTION */}
@@ -134,8 +135,12 @@ class PlayVideo extends React.Component {
                         <Card body>{this.state.video.description}</Card>
                         <br />
 
-                        {/* VIDEO CATEGORY */}
-                        <strong>Category: </strong>{this.state.video.category}
+                        {/* VIDEO DETAILS */}
+                        <p className="posted-date">
+                            <strong>Posted:</strong> {this.state.video.videoPostedDate.substr(0,10)} <br/>
+                            <strong>Category:</strong> {this.state.video.category} <br/>
+                        </p>
+
                     </p>
                 </div>
             );
