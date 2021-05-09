@@ -22,8 +22,7 @@ class PlayVideo extends React.Component {
         };
     }
 
-    // add button for like/dislike; button sends post request to update whichever
-    // maybe send post request everytime this runs to increment view count
+    // LOAD THE VIDEO
     componentDidMount() {
         const { videoId } = this.props.location.state
         fetch(`http://localhost:8090/video/${videoId}`)
@@ -123,14 +122,17 @@ class PlayVideo extends React.Component {
                             <Button variant="danger" value={0} disabled={this.state.dislikeDisabled} onClick={this.clickDislikeButton}>Dislike</Button>
                         </ButtonGroup>
                         &nbsp; {this.state.video.likeCount} Likes
-                        &nbsp; {this.state.video.dislikeCount} Dislikes <br/>
+                        &nbsp; {this.state.video.dislikeCount} Dislikes
+                        <br />
 
                         {/* PAGE VIEWS AND POSTED DATE */}
-                        {this.state.video.viewCount} views - Posted on {this.state.video.videoPostedDate.substr(0,10)}<br />
+                        {this.state.video.viewCount} views - Posted on {this.state.video.videoPostedDate.substr(0,10)}
+                        <br /><br />
 
                         {/* VIDEO DESCRIPTION */}
                         <strong>Description:</strong><br />
-                        <Card body>{this.state.video.description}</Card><br />
+                        <Card body>{this.state.video.description}</Card>
+                        <br />
 
                         {/* VIDEO CATEGORY */}
                         <strong>Category: </strong>{this.state.video.category}
