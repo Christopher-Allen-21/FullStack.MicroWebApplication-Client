@@ -10,7 +10,7 @@ import Button from 'react-bootstrap/Button';
 const Navigation = () => {
     return (
         <>
-            <Navbar className="nav-bar-container" bg="dark" variant="dark">
+            <Navbar className="nav-bar-container" bg="dark" variant="dark" fixed="top">
                 <Navbar.Brand id="nav-bar-logo" href="/"><strong>ZipTube</strong></Navbar.Brand>
                 <Nav className="mr-auto">
                     <Nav.Link href="/explore">Explore</Nav.Link>
