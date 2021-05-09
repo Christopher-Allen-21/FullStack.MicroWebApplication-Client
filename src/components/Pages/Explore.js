@@ -6,13 +6,13 @@ import ExploreCarousel from "../PartsOfPage/ExploreCarousel";
 
 
 const Explore = () => {
-    const url = "http://localhost:8090/file/download/2_Gracie.mp4";
+    const url = "http://localhost:8090/file/download/75";
     const url2 = "http://localhost:8090/file/download/81";
 
 
     return (
         <>
-            <Link to={{pathname: '/play', state: {videoId: 83}}} className="explore-link">Trending</Link>
+            <Link to={{pathname: 'url', state: {videoId: 83}}} className="explore-link">Trending</Link>
             <Link to={{pathname: '/videos', state: {category: "news"}}} className="explore-link">News</Link>
             <Link to={{pathname: '/videos', state: {category: "sports"}}} className="explore-link">Sports</Link>
             <Link to={{pathname: '/videos', state: {category: "entertainment"}}} className="explore-link">Entertainment</Link>
