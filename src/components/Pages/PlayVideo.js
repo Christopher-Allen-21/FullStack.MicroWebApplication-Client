@@ -10,6 +10,7 @@ class PlayVideo extends React.Component {
             video: null,
         };
     }
+
     // add button for like/dislike; button sends post request to update whichever
     // maybe send post request everytime this runs to increment view count
     componentDidMount() {
@@ -35,6 +36,30 @@ class PlayVideo extends React.Component {
             )
     }
 
+    incrementLikes = () => {
+        const { videoId } = this.props.location.state;
+        fetch(`http://localhost:8090/video/like/${videoId}`,
+            {method: "PATCH"})
+            .then( response => response.json() )    // parse body test as JSON
+            .then( result => {
+                this.setState( {
+                    video: result
+                })
+            })
+    }
+
+    decrementLikes = () => {
+        const { videoId } = this.props.location.state;
+        fetch(`http://localhost:8090/video/dislike/${videoId}`,
+            {method: "PATCH"})
+            .then( response => response.json() )    // parse body test as JSON
+            .then( result => {
+                this.setState( {
+                    video: result
+                })
+            })
+    }
+
     render() {
         const { error, isLoaded, items } = this.state;
 
@@ -51,7 +76,8 @@ class PlayVideo extends React.Component {
                     <br />
                     <h1 id="playVideo-title">{this.state.video.title}</h1>
                     <p className="playVideo-paragraph">
-                        {this.state.video.likeCount} Likes {this.state.video.dislikeCount} Dislikes<br />
+                        <button onClick={this.incrementLikes}>Like</button> {this.state.video.likeCount} Likes &nbsp;
+                        <button onClick={this.decrementLikes}>Dislike</button> {this.state.video.dislikeCount} Dislikes<br />
                         {this.state.video.viewCount} views - Posted on {this.state.video.videoPostedDate.substr(0,10)}<br />
                         <strong>Description:</strong><br />
                         <span>{this.state.video.description}</span><br />
