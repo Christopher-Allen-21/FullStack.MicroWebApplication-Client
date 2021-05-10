@@ -4,6 +4,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import Button from 'react-bootstrap/Button'
 import {Accordion, Badge, ToggleButtonGroup} from "react-bootstrap";
 import Card from 'react-bootstrap/Card'
+import CommentsSection from "./CommentsSection";
 
 class PlayVideo extends React.Component {
     constructor(props) {
@@ -31,6 +32,7 @@ class PlayVideo extends React.Component {
                     this.setState({
                         isLoaded: true,
                         video: result,
+                        comments: result.comments
                     });
                 },
                 // Note: it's important to handle errors here
@@ -97,6 +99,7 @@ class PlayVideo extends React.Component {
             })
     }
 
+
     render() {
         const { error, isLoaded, items } = this.state;
 
@@ -143,33 +146,7 @@ class PlayVideo extends React.Component {
                         </p>
 
                         {/* COMMENTS SECTION */}
-                        <strong>Comments:</strong><br />
-                        <Accordion>
-                            <Card>
-                                <Card.Header>
-                                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                                        Show Comments
-                                    </Accordion.Toggle>
-                                </Card.Header>
-                                <Accordion.Collapse eventKey="0">
-                                    <Card.Body>
-                                        This is where the comments will be displayed.
-                                    </Card.Body>
-                                </Accordion.Collapse>
-                            </Card>
-                            <Card>
-                                <Card.Header>
-                                    <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                                        Add a Comment
-                                    </Accordion.Toggle>
-                                </Card.Header>
-                                <Accordion.Collapse eventKey="1">
-                                    <Card.Body>
-                                        User will be able to add comments here (hopefully).
-                                    </Card.Body>
-                                </Accordion.Collapse>
-                            </Card>
-                        </Accordion>
+                        <CommentsSection comments={this.state.video.comments} videoId={this.state.video.videoId}/>
                     </p>
                 </div>
             );
