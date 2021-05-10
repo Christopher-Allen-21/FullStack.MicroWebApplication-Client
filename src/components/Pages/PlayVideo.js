@@ -144,10 +144,7 @@ class PlayVideo extends React.Component {
                         </p>
 
                         {/* COMMENTS SECTION */}
-                        <CommentsSection  videoId={this.state.video.videoId} comments={
-                            this.state.video.comments.map( comment => ( comment.commentText ) ) } />
-                            // this.state.video.comments[0].commentText}
-
+                        <CommentsSection comments={this.state.video.comments}/>
                     </p>
                 </div>
             );

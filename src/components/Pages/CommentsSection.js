@@ -9,30 +9,50 @@ class CommentsSection extends React.Component {
         super(props);
     }
 
+    // CREATES A CARD FOR EACH COMMENT ON THE VIDEO
+    renderCommentCard = () => {
+        return (
+        this.props.comments.map( (comments) => (
+            <>
+                <Card.Body>
+                    <Card.Header>
+                        <strong>{comments.postedBy}</strong>
+                        <span className="posted-date"> &nbsp; Posted: {comments.datePosted.substr(0,10)}</span>
+                    </Card.Header>
+                    <ListGroup>
+                        <ListGroup.Item>
+                            {comments.commentText}
+                            <br/><br/>
+
+                        </ListGroup.Item>
+                    </ListGroup>
+                </Card.Body>
+            </>
+            )
+        )
+        )
+    }
+
     render() {
         return (
             <>
-                {/* COMMENTS SECTION */}
                 <strong>Comments:</strong>
                 <br/>
+
+                {/* DISPLAY COMMENTS */}
                 <Accordion>
                     <Card>
                         <Card.Header>
                             <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                                Show Comments ({this.props.videoId})
+                                Show Comments
                             </Accordion.Toggle>
                         </Card.Header>
                         <Accordion.Collapse eventKey="0">
-                            <Card.Body>
-                                <Card.Header>Posted By: </Card.Header>
-                                    <ListGroup>
-                                        <ListGroup.Item>
-                                            {this.props.comments[0]}
-                                        </ListGroup.Item>
-                                    </ListGroup>
-                            </Card.Body>
+                            <>{this.renderCommentCard()}</>
                         </Accordion.Collapse>
                     </Card>
+
+                    {/* ADD COMMENTS */}
                     <Card>
                         <Card.Header>
                             <Accordion.Toggle as={Button} variant="link" eventKey="1">
