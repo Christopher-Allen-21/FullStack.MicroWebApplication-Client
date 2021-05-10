@@ -45,6 +45,14 @@ class PlayVideo extends React.Component {
                     });
                 }
             )
+        fetch(`http://localhost:8090/video/incrementViewCount/${videoId}`,
+            {method: "PATCH"})
+            .then( response => response.json() )    // parse body test as JSON
+            .then( result => {
+                this.setState( {
+                    video: result
+                })
+            })
     }
 
     // ON CLICK OF LIKE BUTTON

@@ -2,7 +2,7 @@ import React from "react";
 import '../../styling/Pages/VideosByCategory.css';
 import {Link} from "react-router-dom";
 
-import VideoThumbnail from 'react-video-thumbnail'; // use npm published version
+//import VideoThumbnail from 'react-video-thumbnail'; // use npm published version
 
 
 class VideosByCategory extends React.Component {
