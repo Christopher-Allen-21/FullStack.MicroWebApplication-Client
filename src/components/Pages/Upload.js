@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Spinner from '../PartsOfPage/Spinner'
+import {Alert} from "react-bootstrap";
 
 class Upload extends React.Component {
         constructor(props) {
@@ -18,7 +19,7 @@ class Upload extends React.Component {
         state = {
             // No file selected initially
             selectedFile: null,
-            uploadResponse: '',
+            uploadResponse: null,
             videoTitle: null,
             videoCategory: null,
             videoDescription: null,
@@ -99,11 +100,23 @@ class Upload extends React.Component {
             }
         }
 
+        alertDismissible = () => {
+            if(this.state.uploadResponse !== null) {
+                return (
+                    <Alert variant="secondary" onClose={ () => this.setState( {uploadResponse: null } ) } dismissible>
+                        <p>
+                            {this.state.uploadResponse}
+                        </p>
+                    </Alert>
+                );
+            }
+    }
+
         render() {
             return (
                 <>
-                    <br/>{this.state.uploadResponse}<br/>
                     <Spinner/>
+                    {this.alertDismissible()}
                     <h1>Upload a Video</h1>
                     <p>Choose any .mp4 file to upload.
                     <br />Max allowed upload size: 10MB</p>
