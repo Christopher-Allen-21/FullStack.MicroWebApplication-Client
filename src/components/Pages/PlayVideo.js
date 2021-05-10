@@ -32,6 +32,7 @@ class PlayVideo extends React.Component {
                     this.setState({
                         isLoaded: true,
                         video: result,
+                        comments: result.comments
                     });
                 },
                 // Note: it's important to handle errors here
@@ -98,6 +99,7 @@ class PlayVideo extends React.Component {
             })
     }
 
+
     render() {
         const { error, isLoaded, items } = this.state;
 
@@ -144,7 +146,7 @@ class PlayVideo extends React.Component {
                         </p>
 
                         {/* COMMENTS SECTION */}
-                        <CommentsSection comments={this.state.video.comments}/>
+                        <CommentsSection comments={this.state.video.comments} videoId={this.state.video.videoId}/>
                     </p>
                 </div>
             );
