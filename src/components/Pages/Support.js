@@ -24,10 +24,11 @@ class Support extends React.Component {
                     <p>Subject:</p>
                     <input subject="subject" />
                     <p></p>
-                    <p>Feedback:</p>
+                    <p>Message:</p>
       	<textarea
-            id="support-mailing"
-            name="support-mailing"
+            name="name"
+            email="email"
+            subject="subject"
             onChange={this.handleChange}
             placeholder="Enter your message here."
             required
