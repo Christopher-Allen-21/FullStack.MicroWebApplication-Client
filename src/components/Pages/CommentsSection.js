@@ -1,5 +1,5 @@
 import React from "react";
-import {Accordion, ListGroup, Table} from "react-bootstrap";
+import {Accordion, ListGroup} from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -114,7 +114,7 @@ class CommentsSection extends React.Component {
                                     {/* ENTER COMMENT */}
                                     <Form.Group controlId = "commentForm.Comment">
                                         <Form.Label>Comment</Form.Label>
-                                        <Form.Control as="textarea" maxLength="300" rows={3} placeholder="Comment..." onChange={this.onCommentBoxChange}/>
+                                        <Form.Control as="textarea" maxLength="255" rows={3} placeholder="Comment..." onChange={this.onCommentBoxChange}/>
                                     </Form.Group>
                                 </Form>
                                 {/* SUBMIT COMMENT BUTTON */}
