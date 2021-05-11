@@ -70,7 +70,7 @@ class VideosByCategory extends React.Component {
                                 {video.likeCount} Likes {video.dislikeCount} Dislikes<br />
                                 {video.viewCount} views - Posted on {video.videoPostedDate.substr(0,10)}<br />
                                 <strong>Description:</strong><br />
-                                <span className="video-list-description">{video.description}</span><br />
+                                <span className="video-list-description">{video.description}</span>
                                 <strong>Category: </strong>{video.category}
                             </p>
                         </div>

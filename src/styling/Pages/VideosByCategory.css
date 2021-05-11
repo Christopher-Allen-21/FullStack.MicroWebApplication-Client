@@ -15,5 +15,10 @@
 }
 
 .video-list-description {
+    display: block;
+    width: 480px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     overflow-wrap: break-word;
 }
