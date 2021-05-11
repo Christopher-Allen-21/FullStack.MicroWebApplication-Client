@@ -11,9 +11,6 @@ import Spinner from '../PartsOfPage/Spinner'
 import {Alert} from "react-bootstrap";
 
 class Upload extends React.Component {
-        constructor(props) {
-            super(props);
-        }
 
         /* Initial state */
         state = {
@@ -130,8 +127,8 @@ class Upload extends React.Component {
                             <Form id="video-upload-form" className="video-upload-form">
                                 <Form.Group>
                                     <Form.Label>Video Title*</Form.Label>
-                                    <Form.Control type="text" maxLength="50" placeholder="Video Title" onChange={this.onTitleChange}/>
-                                    <Form.Text>Video title cannot exceed 50 characters in length.</Form.Text>
+                                    <Form.Control type="text" maxLength="25" placeholder="Video Title" onChange={this.onTitleChange}/>
+                                    <Form.Text>Video title cannot exceed 25 characters in length.</Form.Text>
                                 </Form.Group>
                                 <br/>
                                 <Form.Group>
@@ -151,8 +148,8 @@ class Upload extends React.Component {
                                 <br/>
                                 <Form.Group>
                                     <Form.Label>Video Description</Form.Label>
-                                    <Form.Control as="textarea" rows={3} maxLength="300" placeholder="Video Description" onChange={this.onDescriptionChange}/>
-                                    <Form.Text>Video description cannot exceed 300 characters in length.</Form.Text>
+                                    <Form.Control as="textarea" rows={3} maxLength="255" placeholder="Video Description" onChange={this.onDescriptionChange}/>
+                                    <Form.Text>Video description cannot exceed 255 characters in length.</Form.Text>
                                 </Form.Group>
                             </Form>
                         </div>

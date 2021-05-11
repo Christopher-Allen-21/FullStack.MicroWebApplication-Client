@@ -11,8 +11,16 @@
 
 .home-paragraph {
     text-align: left;
+    width: 480px;
 }
 
 .home-description {
     overflow-wrap: break-word;
+    display: block;
+    width: 480px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+
 }

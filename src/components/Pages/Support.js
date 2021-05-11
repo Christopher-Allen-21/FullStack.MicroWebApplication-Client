@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../styling/Pages/Support.css'
-import {FormText} from "react-bootstrap";
 
 class Support extends React.Component {
     constructor(props) {
