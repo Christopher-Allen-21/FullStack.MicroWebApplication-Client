@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Router } from 'react-router-dom';
 import './App.css';
 
 import Home from './components/Pages/Home';
@@ -13,14 +13,23 @@ import History from './components/Pages/History';
 import Support from "./components/Pages/Support";
 import VideosByCategory from "./components/Pages/VideosByCategory";
 import PlayVideo from "./components/Pages/PlayVideo";
+import Login from "./components/Authentication/LoginButton";
+import Profile from "./components/Pages/Profile"
+import { useAuth0 } from "@auth0/auth0-react";
+import Loading from "./components/Authentication/Loading";
+import ProtectedRoute from "./auth/ProtectedRoute";
 
 // npm start in terminal to run
 
-class App extends Component {
+const App = () => {
 
+  const {isLoading} = useAuth0();
+  if (isLoading) {
+    return <Loading /> ;
+  }
 
-  render() {
     return (
+        <>
         <BrowserRouter>
           <div>
             <Navigation />
@@ -34,13 +43,15 @@ class App extends Component {
             <div className="page-element">
               <Switch>
                 <Route path="/" component={Home} exact/>
-                <Route path="/explore" component={Explore}/>
-                <Route path="/upload"><Upload /></Route>
-                <Route path="/subscriptions" component={Subscriptions}/>
-                <Route path="/history" component={History}/>
+                <ProtectedRoute path="/explore" component={Explore}/>
+                <ProtectedRoute path="/upload" exact component={Upload} />
+                <ProtectedRoute path="/subscriptions" exact component={Subscriptions}/>
+                <ProtectedRoute path="/history" component={History}/>
                 <Route path="/support" component={Support}/>
-                <Route path="/video" component={VideosByCategory}/>
-                <Route path="/play" component={PlayVideo}/>
+                <ProtectedRoute path="/videos" component={VideosByCategory}/>
+                <ProtectedRoute path="/play" component={PlayVideo}/>
+                <Route path="/login" component={Login}/>
+                <ProtectedRoute path="/profile" component={Profile}/>
                 <Route component={Error}/>
               </Switch>
             </div>
@@ -51,8 +62,8 @@ class App extends Component {
 
           </div>
         </BrowserRouter>
+        </>
     );
-  }
 }
 
 export default App;
