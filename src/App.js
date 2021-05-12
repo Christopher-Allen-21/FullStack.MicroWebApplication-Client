@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch, Router } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import Home from './components/Pages/Home';
@@ -43,12 +43,12 @@ const App = () => {
             <div className="page-element">
               <Switch>
                 <Route path="/" component={Home} exact/>
-                <ProtectedRoute path="/explore" component={Explore}/>
+                <Route path="/explore" component={Explore}/>
                 <ProtectedRoute path="/upload" exact component={Upload} />
                 <ProtectedRoute path="/subscriptions" exact component={Subscriptions}/>
                 <ProtectedRoute path="/history" component={History}/>
-                <Route path="/support" component={Support}/>
-                <ProtectedRoute path="/videos" component={VideosByCategory}/>
+                <ProtectedRoute path="/support" component={Support}/>
+                <ProtectedRoute path="/video" component={VideosByCategory}/>
                 <ProtectedRoute path="/play" component={PlayVideo}/>
                 <ProtectedRoute path="/profile" component={Profile}/>
                 <Route path="/login" component={Login}/>
