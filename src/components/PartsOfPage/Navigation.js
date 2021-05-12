@@ -27,7 +27,7 @@ class Navigation extends React.Component {
                     <Nav className="mr-auto">
                         <Nav.Link href="/explore">Explore</Nav.Link>
                         <Nav.Link href="/upload">Upload</Nav.Link>
-                        <Nav.Link href="/subscriptions">Subscriptions</Nav.Link>
+                        {/*<Nav.Link href="/subscriptions">Subscriptions</Nav.Link>*/}
                         <Nav.Link href="/history">History</Nav.Link>
                         <Nav.Link href="/support">Support</Nav.Link>
                     </Nav>
