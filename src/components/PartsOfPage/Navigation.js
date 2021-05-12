@@ -8,8 +8,6 @@ import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 
 import AuthNav from "../../auth/AuthNav.js"
-import {useAuth0} from "@auth0/auth0-react";
-import Loading from "../Authentication/Loading.js"
 
 
 const Navigation = () => {
