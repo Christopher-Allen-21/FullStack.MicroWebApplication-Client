@@ -44,8 +44,6 @@ class Support extends React.Component {
         this.setState({feedback: event.target.value})
     }
 
-    handleSubmit() {
-    }
 
     handleSubmit (event) {
         const templateId = 'template_id';

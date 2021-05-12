@@ -39,7 +39,7 @@ class App extends Component {
                 <Route path="/subscriptions" component={Subscriptions}/>
                 <Route path="/history" component={History}/>
                 <Route path="/support" component={Support}/>
-                <Route path="/videos" component={VideosByCategory}/>
+                <Route path="/video" component={VideosByCategory}/>
                 <Route path="/play" component={PlayVideo}/>
                 <Route component={Error}/>
               </Switch>

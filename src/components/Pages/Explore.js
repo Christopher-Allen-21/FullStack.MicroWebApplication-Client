@@ -13,14 +13,14 @@ const Explore = () => {
 
     return (
         <>
-            <Link to={{pathname: '/videos', state: {category: "trending"}}} className="explore-link">Trending</Link>
-            <Link to={{pathname: '/videos', state: {category: "news"}}} className="explore-link">News</Link>
-            <Link to={{pathname: '/videos', state: {category: "sports"}}} className="explore-link">Sports</Link>
-            <Link to={{pathname: '/videos', state: {category: "entertainment"}}} className="explore-link">Entertainment</Link>
-            <Link to={{pathname: '/videos', state: {category: "music"}}} className="explore-link">Music</Link>
-            <Link to={{pathname: '/videos', state: {category: "traveling"}}} className="explore-link">Traveling</Link>
-            <Link to={{pathname: '/videos', state: {category: "fitness"}}} className="explore-link">Fitness</Link>
-            <Link to={{pathname: '/videos', state: {category: "videogames"}}} className="explore-link">Video Games</Link>
+            <Link to={{pathname: '/video', state: {category: "trending"}}} className="explore-link">Trending</Link>
+            <Link to={{pathname: '/video', state: {category: "news"}}} className="explore-link">News</Link>
+            <Link to={{pathname: '/video', state: {category: "sports"}}} className="explore-link">Sports</Link>
+            <Link to={{pathname: '/video', state: {category: "entertainment"}}} className="explore-link">Entertainment</Link>
+            <Link to={{pathname: '/video', state: {category: "music"}}} className="explore-link">Music</Link>
+            <Link to={{pathname: '/video', state: {category: "traveling"}}} className="explore-link">Traveling</Link>
+            <Link to={{pathname: '/video', state: {category: "fitness"}}} className="explore-link">Fitness</Link>
+            <Link to={{pathname: '/video', state: {category: "videogames"}}} className="explore-link">Video Games</Link>
             <br />
             <hr />
 

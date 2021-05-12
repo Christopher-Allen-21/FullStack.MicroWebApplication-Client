@@ -6,9 +6,7 @@ import Form from "react-bootstrap/Form";
 
 
 class CommentsSection extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+
 
     state = {
         displayName: null,
