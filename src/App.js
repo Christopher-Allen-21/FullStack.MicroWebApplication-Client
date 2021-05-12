@@ -44,7 +44,7 @@ const App = () => {
               <Switch>
                 <Route path="/" component={Home} exact/>
                 <ProtectedRoute path="/explore" component={Explore}/>
-                <ProtectedRoute path="/upload"><Upload /></ProtectedRoute>
+                <ProtectedRoute path="/upload" exact component={Upload} />
                 <ProtectedRoute path="/subscriptions" exact component={Subscriptions}/>
                 <ProtectedRoute path="/history" component={History}/>
                 <Route path="/support" component={Support}/>
