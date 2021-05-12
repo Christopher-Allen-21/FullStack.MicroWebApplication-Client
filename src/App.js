@@ -50,8 +50,8 @@ const App = () => {
                 <Route path="/support" component={Support}/>
                 <ProtectedRoute path="/videos" component={VideosByCategory}/>
                 <ProtectedRoute path="/play" component={PlayVideo}/>
-                <Route path="/login" component={Login}/>
                 <ProtectedRoute path="/profile" component={Profile}/>
+                <Route path="/login" component={Login}/>
                 <Route component={Error}/>
               </Switch>
             </div>
