@@ -59,7 +59,7 @@ class CommentsSection extends React.Component {
         let displayName = this.state.displayName;
         let commentText = this.state.commentBox;
         let today = new Date().toISOString().slice(0, 10);
-        fetch(`http://localhost:8090/video/addComment/${videoId}`, {
+        fetch(`https://zip-tube-backend.herokuapp.com/video/addComment/${videoId}`, {
             method: "PATCH",
             body: JSON.stringify({ postedBy: displayName, commentText: commentText, datePosted: today } ),
             headers: {"Content-type" : "application/json"}

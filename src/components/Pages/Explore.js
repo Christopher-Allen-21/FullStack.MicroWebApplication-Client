@@ -6,8 +6,8 @@ import ExploreCarousel from "../PartsOfPage/ExploreCarousel";
 
 
 const Explore = () => {
-    const url = "http://localhost:8090/file/download/154";
-    const url2 = "http://localhost:8090/file/download/170";
+    const url = "https://zip-tube-backend.herokuapp.com//file/download/154";
+    const url2 = "https://zip-tube-backend.herokuapp.com/file/download/170";
 
 
     return (
