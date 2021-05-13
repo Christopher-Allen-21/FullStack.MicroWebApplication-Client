@@ -2,7 +2,7 @@ import React from 'react';
 import '../../styling/Pages/History.css'
 
 const History = () => {
-    const url = "http://localhost:8090/file/download/2_Gracie.mp4"
+    const url = "https://zip-tube-backend.herokuapp.com/file/download/2_Gracie.mp4"
 
     return (
         <>
