@@ -34,5 +34,5 @@
 ## Front End of ZipTube Application
 * This repository
 
-![Screen Shot 2021-05-11 at 8 04 29 AM](https://user-images.githubusercontent.com/23746404/117812471-d0219180-b22f-11eb-8c5d-5deba190507f.png)
+![Screen Shot 2021-05-12 at 8 08 06 PM](https://user-images.githubusercontent.com/23746404/118059149-d2820980-b35d-11eb-8fe1-36ec831a56b8.png)
 
