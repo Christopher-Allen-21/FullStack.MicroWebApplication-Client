@@ -69,6 +69,7 @@ class Upload extends React.Component {
                 } )
         };
 
+
         // Display Info on the File the User Chose
         fileData = () => {
             if (this.state.selectedFile) {
