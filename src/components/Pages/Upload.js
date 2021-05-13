@@ -56,7 +56,7 @@ class Upload extends React.Component {
             // With axios, returns JSON response so you don't need to resolve the promise 2s
             // Axios will catch all error in catch block
             trackPromise(
-            axios.post("http://localhost:8090/file/upload", formData)
+            axios.post("https://zip-tube-backend.herokuapp.com/file/upload", formData)
                 .then( response => {
                     this.setState({videoId: [response.data]});
                     this.setState({uploadResponse: `Video uploaded successfully! Video id is: ${this.state.videoId}`});
