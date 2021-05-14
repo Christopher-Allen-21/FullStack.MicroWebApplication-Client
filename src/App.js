@@ -36,7 +36,7 @@ const App = () => {
 
             <div id="zip-tube-banner">
               <hr />
-              <h1 id="zip-tube-title"><a id="zip-tube-title-link" href="/"><img id="zip-tube-logo" src="https://i.imgur.com/4pvZyKt.png" />ZipTube</a></h1>
+              <h1 id="zip-tube-title"><a id="zip-tube-title-link" href="/"><img id="zip-tube-logo" src="https://i.imgur.com/BqT2G0X.png" />ZipTube</a></h1>
               <hr />
             </div>
 
