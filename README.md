@@ -19,7 +19,7 @@
 
 
 ## Front End of ZipTube Application
-* https://github.com/Christopher-Allen-21/FullStack.MicroWebApplication-Client(This repository)
+* https://github.com/Christopher-Allen-21/FullStack.MicroWebApplication-Client (This repository)
 
 ## Video Library Application
 ### User Stories to Fulfill  
