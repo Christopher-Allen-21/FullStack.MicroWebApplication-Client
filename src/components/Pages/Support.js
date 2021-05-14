@@ -8,11 +8,11 @@ export default function Support() {
         e.preventDefault()
         emailjs.sendForm('gmail', 'template_t9nwbc3', e.target, 'user_mGnb4NpHJfoAK5kidhkDI')
             .then((result) => {
-                console.log(result.text);
+                console.log('SUCCESS!', result.text);
             }, (error) => {
-                console.log(error.text);
+                console.log('FAILED...', error);
             });
-
+        e.target.reset()
     }
 
     return (
@@ -27,6 +27,7 @@ export default function Support() {
                 <p></p>
             <p>Message</p>
             <textarea name="message" style={{width: '50%', height: '150px'}} />
+                <p></p>
             <input type="submit" value="Send" />
             </div>
         </form>
