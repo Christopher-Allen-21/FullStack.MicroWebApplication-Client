@@ -31,7 +31,7 @@ class Profile extends React.Component {
     componentDidMount() {
         const {user} = this.props.auth0;
         const {name} = user;
-        fetch(`http://localhost:8090/video/getComment/user/${name}`)
+        fetch(`https://zip-tube-backend.herokuapp.com/video/getComment/user/${name}`)
             .then(res => res.json())
             .then(
                 (result) => {
