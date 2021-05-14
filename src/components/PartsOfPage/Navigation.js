@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
+import {withAuth0} from "@auth0/auth0-react";
 
 import AuthNav from "../../auth/AuthNav.js"
 
@@ -48,4 +49,4 @@ class Navigation extends React.Component{
 
 }
 
-export default Navigation;
+export default withAuth0(Navigation);

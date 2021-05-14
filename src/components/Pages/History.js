@@ -1,52 +1,78 @@
 import React from 'react';
 import '../../styling/Pages/History.css'
+import {withAuth0} from "@auth0/auth0-react";
+import {Link} from "react-router-dom";
 
-const History = () => {
-    const url = "https://zip-tube-backend.herokuapp.com/file/download/2_Gracie.mp4"
+class History extends React.Component {
 
-    return (
-        <>
+        state = {
+            error: null,
+            isLoaded: false,
+            items: [],
+        };
 
-            <p>Your watch history: </p>
-            <div>
-            <video className="history-video" controls muted>
-                <source src={url} type="video/mp4"></source>
-            </video>
-            <text>"Description 1"</text>
-            </div>
+    componentDidMount() {
+        const {user} = this.props.auth0;
+        const {name} = user;
+        fetch(`https://zip-tube-backend.herokuapp.com/video/uploadUser/${name}`)
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    this.setState({
+                        isLoaded: true,
+                        items: result
+                    });
+                },
+                (error) => {
+                    this.setState({
+                        isLoaded: true,
+                        error
+                    });
+                }
+            )
+    }
 
-            <div>
-                <video className="history-video" controls muted>
-                    <source src={url} type="video/mp4"></source>
-                </video>
-                <text>"Description 2"</text>
-            </div>
+    render()
+    {
+        const {user} = this.props.auth0;
+        const {name} = user;
 
+        const { error, isLoaded, items } = this.state;
 
-            <div>
-                <video className="history-video" controls muted>
-                    <source src={url} type="video/mp4"></source>
-                </video>
-                <text>"Description 3"</text>
-            </div>
-
-
-            <div>
-                <video className="history-video" controls muted>
-                    <source src={url} type="video/mp4"></source>
-                </video>
-                <text>"Description 4"</text>
-            </div>
-
-
-            <div>
-                <video className="history-video" controls muted>
-                    <source src={url} type="video/mp4"></source>
-                </video>
-                <text>"Description 5"</text>
-            </div>
-        </>
-    );
+        if (error) {
+            return <div>Error: {error.message}</div>;
+        }
+        else if (!isLoaded) {
+            return <div>Loading...</div>;
+        }
+        // else if (items.length === 0) {
+        //     return <div>You have not uploaded any videos yet!</div>
+        // }
+        else {
+            return (
+                <>
+                    <h1>Videos Uploaded by <i>{name}</i></h1>
+                    {items.map(video => (
+                        <div className="home-container" key={video.videoId}>
+                            <strong>Video ID:</strong> {video.videoId}<br />
+                            <Link to={{pathname: '/play', state: {videoId: video.videoId}}}>
+                                <video controlsList="nofullscreen nodownload" className="video-list-video" src={`https://zip-tube-backend.herokuapp.com/file/download/${video.videoId}`} type="video/mp4" controls muted></video>
+                            </Link>
+                            <br />
+                            <h1 id="home-title">{video.title}</h1>
+                            <p className="home-paragraph">
+                                {video.likeCount} Likes {video.dislikeCount} Dislikes<br />
+                                {video.viewCount} views - Posted on {video.videoPostedDate.substr(0,10)}<br />
+                                <strong>Description:</strong><br />
+                                <span className="home-description">{video.description}</span>
+                                <strong>Category: </strong>{video.category}
+                            </p>
+                        </div>
+                    ))}
+                </>
+            );
+        }
+    }
 }
 
-export default History;
+export default withAuth0(History);
