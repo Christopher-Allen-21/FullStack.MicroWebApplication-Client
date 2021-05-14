@@ -14,7 +14,7 @@ class VideosByCategory extends React.Component {
 
     componentDidMount() {
         const { category } = this.props.location.state
-        fetch(`https://zip-tube-backend.herokuapp.com/video/${category}`)
+        fetch(`https://ziptube-theresa.herokuapp.com/video/${category}`)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -48,7 +48,7 @@ class VideosByCategory extends React.Component {
                         <div className="video-list-container" key={video.videoId}>
                             <strong>Video ID:</strong> {video.videoId}<br />
                             <Link to={{pathname: '/play', state: {videoId: video.videoId}}}>
-                                <video controlsList="nofullscreen nodownload" className="video-list-video" src={`https://zip-tube-backend.herokuapp.com/file/download/${video.videoId}`} type="video/mp4" controls muted></video>
+                                <video controlsList="nofullscreen nodownload" className="video-list-video" src={`https://ziptube-theresa.herokuapp.com/file/download/${video.videoId}`} type="video/mp4" controls muted></video>
                             </Link>
                             <br />
                             <h1 id="video-list-title">{video.title}</h1>

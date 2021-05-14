@@ -6,13 +6,13 @@ import ExploreCarousel from "../PartsOfPage/ExploreCarousel";
 
 
 const Explore = () => {
-    const url = "https://zip-tube-backend.herokuapp.com//file/download/154";
-    const url2 = "https://zip-tube-backend.herokuapp.com/file/download/170";
-    const url3 = "https://zip-tube-backend.herokuapp.com/file/download/180";
-    const url4 = "https://zip-tube-backend.herokuapp.com/file/download/175";
-    const url5 = "https://zip-tube-backend.herokuapp.com/file/download/162";
-    const url6 = "https://zip-tube-backend.herokuapp.com/file/download/147";
-    const url7 = "https://zip-tube-backend.herokuapp.com/file/download/177";
+    const url = "https://ziptube-theresa.herokuapp.com/file/download/154";
+    const url2 = "https://ziptube-theresa.herokuapp.com/file/download/170";
+    const url3 = "https://ziptube-theresa.herokuapp.com/file/download/180";
+    const url4 = "https://ziptube-theresa.herokuapp.com/file/download/175";
+    const url5 = "https://ziptube-theresa.herokuapp.com/file/download/162";
+    const url6 = "https://ziptube-theresa.herokuapp.com/file/download/147";
+    const url7 = "https://ziptube-theresa.herokuapp.com/file/download/177";
 
 
     return (
