@@ -59,7 +59,7 @@ class Upload extends React.Component {
         // Axios will catch all error in catch block
         // use trackPromise for the spinner
         trackPromise(
-            axios.post("https://ziptube-theresa.herokuapp.com/file/upload", formData)
+            axios.post("https://zipbackend.herokuapp.com/file/upload", formData)
                 .then(response => {
                     this.setState({videoId: [response.data]});
                     this.setState({uploadResponse: `Video uploaded successfully! Video id is: ${this.state.videoId}`});

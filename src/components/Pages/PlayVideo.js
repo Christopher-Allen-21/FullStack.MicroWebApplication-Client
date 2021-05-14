@@ -25,7 +25,7 @@ class PlayVideo extends React.Component {
     // LOAD THE VIDEO
     componentDidMount() {
         const { videoId } = this.props.location.state
-        fetch(`https://ziptube-theresa.herokuapp.com/video/${videoId}`)
+        fetch(`https://zipbackend.herokuapp.com/video/${videoId}`)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -45,7 +45,7 @@ class PlayVideo extends React.Component {
                     });
                 }
             )
-        fetch(`https://ziptube-theresa.herokuapp.com/video/incrementViewCount/${videoId}`,
+        fetch(`https://zipbackend.herokuapp.com/video/incrementViewCount/${videoId}`,
             {method: "PATCH"})
             .then( response => response.json() )    // parse body test as JSON
             .then( result => {
@@ -84,7 +84,7 @@ class PlayVideo extends React.Component {
     // INCREMENT/DECREMENT LIKE COUNT BY 1 ON SERVER
     changeLikes = (plusOrMinus) => {
         const { videoId } = this.props.location.state;
-        fetch(`https://ziptube-theresa.herokuapp.com/video/like/${plusOrMinus}/${videoId}`,
+        fetch(`https://zipbackend.herokuapp.com/video/like/${plusOrMinus}/${videoId}`,
             {method: "PATCH"})
             .then( response => response.json() )    // parse body test as JSON
             .then( result => {
@@ -97,7 +97,7 @@ class PlayVideo extends React.Component {
     // INCREMENT/DECREMENT DISLIKE COUNT BY 1 ON SERVER
     changeDislikes = (plusOrMinus) => {
         const { videoId } = this.props.location.state;
-        fetch(`https://ziptube-theresa.herokuapp.com/video/dislike/${plusOrMinus}/${videoId}`,
+        fetch(`https://zipbackend.herokuapp.com/video/dislike/${plusOrMinus}/${videoId}`,
             {method: "PATCH"})
             .then( response => response.json() )    // parse body test as JSON
             .then( result => {
@@ -122,7 +122,7 @@ class PlayVideo extends React.Component {
                 <div className="playVideo-container">
 
                     {/* VIDEO */}
-                    <video className="playVideo-video" src={`https://ziptube-theresa.herokuapp.com/file/download/${this.state.video.videoId}`} type="video/mp4" controls muted></video>
+                    <video className="playVideo-video" src={`https://zipbackend.herokuapp.com/file/download/${this.state.video.videoId}`} type="video/mp4" controls muted></video>
                     <br />
 
                     {/* VIDEO TITLE */}
