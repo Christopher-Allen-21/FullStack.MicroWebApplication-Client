@@ -14,7 +14,7 @@ class History extends React.Component {
     componentDidMount() {
         const {user} = this.props.auth0;
         const {name} = user;
-        fetch(`https://ziptube-theresa.herokuapp.com/video/uploadUser/${name}`)
+        fetch(`https://zipbackend.herokuapp.com/video/uploadUser/${name}`)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -56,7 +56,7 @@ class History extends React.Component {
                         <div className="home-container" key={video.videoId}>
                             <strong>Video ID:</strong> {video.videoId}<br />
                             <Link to={{pathname: '/play', state: {videoId: video.videoId}}}>
-                                <video controlsList="nofullscreen nodownload" className="video-list-video" src={`https://ziptube-theresa.herokuapp.com/file/download/${video.videoId}`} type="video/mp4" controls muted></video>
+                                <video controlsList="nofullscreen nodownload" className="video-list-video" src={`https://zipbackend.herokuapp.com/file/download/${video.videoId}`} type="video/mp4" controls muted></video>
                             </Link>
                             <br />
                             <h1 id="home-title">{video.title}</h1>
