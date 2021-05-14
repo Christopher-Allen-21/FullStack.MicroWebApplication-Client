@@ -151,6 +151,7 @@ class PlayVideo extends React.Component {
                         <p className="posted-date">
                             <strong>Posted:</strong> {this.state.video.videoPostedDate.substr(0,10)} <br/>
                             <strong>Category:</strong> {this.state.video.category} <br/>
+                            <strong>Video Id:</strong> {this.state.video.videoId}
                         </p>
 
                         {/* COMMENTS SECTION */}

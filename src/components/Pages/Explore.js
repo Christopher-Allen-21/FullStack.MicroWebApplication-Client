@@ -8,6 +8,11 @@ import ExploreCarousel from "../PartsOfPage/ExploreCarousel";
 const Explore = () => {
     const url = "https://zip-tube-backend.herokuapp.com//file/download/154";
     const url2 = "https://zip-tube-backend.herokuapp.com/file/download/170";
+    const url3 = "https://zip-tube-backend.herokuapp.com/file/download/180";
+    const url4 = "https://zip-tube-backend.herokuapp.com/file/download/175";
+    const url5 = "https://zip-tube-backend.herokuapp.com/file/download/162";
+    const url6 = "https://zip-tube-backend.herokuapp.com/file/download/147";
+    const url7 = "https://zip-tube-backend.herokuapp.com/file/download/177";
 
 
     return (
@@ -33,19 +38,19 @@ const Explore = () => {
                     <source src={url2} type="video/mp4"></source>
                 </video>
                 <video controlsList="nofullscreen nodownload" className="explore-video-carousel" style={{padding: 8}} controls muted>
-                    <source src={url} type="video/mp4"></source>
+                    <source src={url3} type="video/mp4"></source>
                 </video>
                 <video controlsList="nofullscreen nodownload" className="explore-video-carousel" style={{padding: 8}} controls muted>
-                    <source src={url2} type="video/mp4"></source>
+                    <source src={url4} type="video/mp4"></source>
                 </video>
                 <video controlsList="nofullscreen nodownload" className="explore-video-carousel" style={{padding: 8}} controls muted>
-                    <source src={url} type="video/mp4"></source>
+                    <source src={url5} type="video/mp4"></source>
                 </video>
                 <video controlsList="nofullscreen nodownload" className="explore-video-carousel" style={{padding: 8}} controls muted>
-                    <source src={url} type="video/mp4"></source>
+                    <source src={url6} type="video/mp4"></source>
                 </video>
                 <video controlsList="nofullscreen nodownload" className="explore-video-carousel" style={{padding: 8}} controls muted>
-                    <source src={url} type="video/mp4"></source>
+                    <source src={url7} type="video/mp4"></source>
                 </video>
             </ExploreCarousel>
 

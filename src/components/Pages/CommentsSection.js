@@ -3,6 +3,7 @@ import {Accordion, ListGroup} from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import {withAuth0} from "@auth0/auth0-react";
 
 
 class CommentsSection extends React.Component {
@@ -59,9 +60,10 @@ class CommentsSection extends React.Component {
         let displayName = this.state.displayName;
         let commentText = this.state.commentBox;
         let today = new Date().toISOString().slice(0, 10);
-        fetch(`https://zip-tube-backend.herokuapp.com/video/addComment/${videoId}`, {
+        let user = this.props.auth0.user.name;
+        fetch(`http://localhost:8090/video/addComment/${videoId}`, {
             method: "PATCH",
-            body: JSON.stringify({ postedBy: displayName, commentText: commentText, datePosted: today } ),
+            body: JSON.stringify({ postedBy: displayName, commentText: commentText, datePosted: today, user: user } ),
             headers: {"Content-type" : "application/json"}
         })
         .then( response => response.json() )    // parse body test as JSON
@@ -75,6 +77,8 @@ class CommentsSection extends React.Component {
     }
 
     render() {
+        const {user} = this.props.auth0;
+        const {name} = user;
         return (
             <>
                 <strong>Comments:</strong>
@@ -103,6 +107,13 @@ class CommentsSection extends React.Component {
                         <Accordion.Collapse eventKey="1">
                             <Card.Body>
                                 <Form>
+                                    {/*CURRENT USER'S USERNAME*/}
+                                    <fieldset disabled>
+                                        <Form.Group>
+                                            <Form.Label htmlFor="disabledTextInput">User</Form.Label>
+                                            <Form.Control id="disabledTextInput" placeholder={name} />
+                                        </Form.Group>
+                                    </fieldset>
                                     {/* ENTER DISPLAY NAME */}
                                     <Form.Group controlId = "commentForm.Name">
                                         <Form.Label>Display Name</Form.Label>
@@ -127,4 +138,4 @@ class CommentsSection extends React.Component {
     }
 }
 
-export default CommentsSection;
+export default withAuth0(CommentsSection);
