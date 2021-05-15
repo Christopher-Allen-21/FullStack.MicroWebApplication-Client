@@ -51,10 +51,10 @@
 * mockito
 
 #### Front End
-* npm install for React
+* `npm install` for React
 * import React-Bootstrap, auth0-react, react-router-don, react-promist-tracker, emailjs-com
 
-## Running the application
+## Running the Application
 #### Back End
 * You can run back-end by running the VideoAppApplication.java from: com/GroupProject/VideoApp/VideoAppApplication.java
 
