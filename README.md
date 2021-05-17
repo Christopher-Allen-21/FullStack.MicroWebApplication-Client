@@ -15,11 +15,11 @@
 
 
 # Back End of ZipTube Application
-* https://github.com/MNinh/FullStack.MicroWebApplication-Server (This repository)
+* https://github.com/MNinh/FullStack.MicroWebApplication-Server
 
 
 # Front End of ZipTube Application
-* https://github.com/Christopher-Allen-21/FullStack.MicroWebApplication-Client
+* https://github.com/Christopher-Allen-21/FullStack.MicroWebApplication-Client  (This repository)
 
 # Video Library Application
 ## User Interaction 
