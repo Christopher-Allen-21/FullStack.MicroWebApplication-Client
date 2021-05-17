@@ -5,56 +5,61 @@
 * **Purpose** - to demonstrate the construction of a full-stacked web-application, development of both front end (client side) and back end(server side) portions of web application, hosting on cloud services for deployment.
 
 # Contributors:
-* Chris Allen (@Christopher-Allen-21), www.linkedin.com/in/chrisallen2110/
-* Theresa Mashura (@theresa-mashura), www.linkedin.com/in/theresamashura/
-* Justin Banks (@Jbanksalpha), www.linkedin.com/in/justinlbanks/
-* Mike Ninh (@MNinh), www.linkedin.com/in/mikeninh/
+* Chris Allen ([@Christopher-Allen-21](https://github.com/Christopher-Allen-21)) | [Chris Allen's Linkedin](www.linkedin.com/in/chrisallen2110/ "Connect with Chris")
+* Theresa Mashura ([@theresa-mashura](https://github.com/theresa-mashura)) | [Theresa Mashura's Linkedin](www.linkedin.com/in/theresamashura/ "Connect with Theresa") 
+* Justin Banks ([@Jbanksalpha](https://github.com/Jbanksalpha)) | [Justin Banks' Linkedin](www.linkedin.com/in/justinlbanks/ "Connect with Justin")  
+* Mike Ninh ([@MNinh](https://github.com/MNinh)) | [Mike Ninh's Linkedin](www.linkedin.com/in/mikeninh/ "Connect with Mike") 
 
-## Website
+# Website
 * https://master.dcqz99xhopewe.amplifyapp.com/
 
 
-## Back End of ZipTube Application
-* https://github.com/MNinh/FullStack.MicroWebApplication-Server 
+# Back End of ZipTube Application
+* https://github.com/MNinh/FullStack.MicroWebApplication-Server (This repository)
 
 
-## Front End of ZipTube Application
-* https://github.com/Christopher-Allen-21/FullStack.MicroWebApplication-Client (This repository)
+# Front End of ZipTube Application
+* https://github.com/Christopher-Allen-21/FullStack.MicroWebApplication-Client
 
-## Video Library Application
-### User Stories to Fulfill  
+# Video Library Application
+## User Interaction 
 * As a client, (logged in) I
     * can upload new videos
 	* can view list of all videos
 	* can filter videos by category
 	* can post simple text-comments on a video
 	* can get in contact with developers
-	* can login and view profile
+	* can view profile
 	* can like or dislike videos
 	* view history of watched videos
+	* logout of account
 
 * As a client, (not logged in) I
     * can view list of all videos
+    * login into account via auth0
+    * make an account via auth0
 
 ## Developmental Notes
+
+### Tech Stack
+* **UML Diagram** - PlantUML
 * **Wireframe** - Mockflow
-* **Frontend** - Reactjs
-* **Business Logic** - Java built on Maven with Spring Boot framework
+* **Visual UI/Front end** - Reactjs
+* **Business Logic/Back end** - Java built on Maven with Spring Boot framework
 * **Data Layer** - MySQL hosted with AWS RDS
 * **Cloud** - Backend logic hosted by Heroku. Frontend hosted with AWS Amplify. AWS S3 buckets for video storage.
 
-## Installation
+### Installation
 #### Back End
 * Use Spring Initializer to create an starting point for you application
 * Project Lombok
-* AWS s3
-* mockito
+* AWS S3
 
 #### Front End
 * `npm install` for React
 * import React-Bootstrap, auth0-react, react-router-don, react-promist-tracker, emailjs-com
 
-## Running the Application
+### Running the Application
 #### Back End
 * You can run back-end by running the VideoAppApplication.java from: com/GroupProject/VideoApp/VideoAppApplication.java
 
