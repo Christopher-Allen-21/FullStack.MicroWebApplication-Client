@@ -5,10 +5,10 @@
 * **Purpose** - to demonstrate the construction of a full-stacked web-application, development of both front end (client side) and back end(server side) portions of web application, hosting on cloud services for deployment.
 
 # Contributors:
-* Chris Allen ([@Christopher-Allen-21](https://github.com/Christopher-Allen-21)) | [Chris Allen's Linkedin](www.linkedin.com/in/chrisallen2110/ "Connect with Chris")
-* Theresa Mashura ([@theresa-mashura](https://github.com/theresa-mashura)) | [Theresa Mashura's Linkedin](www.linkedin.com/in/theresamashura/ "Connect with Theresa") 
-* Justin Banks ([@Jbanksalpha](https://github.com/Jbanksalpha)) | [Justin Banks' Linkedin](www.linkedin.com/in/justinlbanks/ "Connect with Justin")  
-* Mike Ninh ([@MNinh](https://github.com/MNinh)) | [Mike Ninh's Linkedin](www.linkedin.com/in/mikeninh/ "Connect with Mike") 
+* Chris Allen ([@Christopher-Allen-21](https://github.com/Christopher-Allen-21)) | [Chris Allen's Linkedin](https://www.linkedin.com/in/chrisallen2110/ "Connect with Chris")
+* Theresa Mashura ([@theresa-mashura](https://github.com/theresa-mashura)) | [Theresa Mashura's Linkedin](https://www.linkedin.com/in/theresamashura/ "Connect with Theresa") 
+* Justin Banks ([@Jbanksalpha](https://github.com/Jbanksalpha)) | [Justin Banks' Linkedin](https://www.linkedin.com/in/justinlbanks/ "Connect with Justin")  
+* Mike Ninh ([@MNinh](https://github.com/MNinh)) | [Mike Ninh's Linkedin](https://www.linkedin.com/in/mikeninh/ "Connect with Mike") 
 
 # Website
 * https://master.d2q1obkhk7m117.amplifyapp.com/
