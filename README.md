@@ -53,7 +53,7 @@
 #### Back End
 * Use Spring Initializer to create an starting point for you application
 * Project Lombok
-* AWS S3
+* AWS S3 Access Keys
 
 #### Front End
 * `npm install` for React
