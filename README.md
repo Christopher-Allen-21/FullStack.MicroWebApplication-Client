@@ -11,7 +11,7 @@
 * Mike Ninh ([@MNinh](https://github.com/MNinh)) | [Mike Ninh's Linkedin](www.linkedin.com/in/mikeninh/ "Connect with Mike") 
 
 # Website
-* https://master.dcqz99xhopewe.amplifyapp.com/
+* https://master.d2q1obkhk7m117.amplifyapp.com/
 
 
 # Back End of ZipTube Application
